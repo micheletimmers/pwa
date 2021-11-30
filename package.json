@@ -1,0 +1,15 @@
+{
+  "name": "pwa",
+  "version": "1.0.0",
+  "description": "Contains starting code for my tutorial on creating PWAs, check it out here:\\ https://www.youtube.com/watch?v=WbbAPfDVqfY",
+  "main": "sw.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^8.10.0",
+    "metismenu": "^3.0.7"
+  }
+}
