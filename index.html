@@ -17,324 +17,427 @@
 		
 		
     </head>
+
+	
     <body>
 
-
-		<!--wrapper-->
-		<div class="wrapper">
-
-			<!--sidebar wrapper -->
-			<div class="sidebar-wrapper" data-simplebar="true">
-				<div class="container-fluid h-100">
-					<div class="row h-100">
-						<div class="flex-shrink-0 p-3 bg-white">
-						<aside class="col-12 col-md-12 p-0 bg-white">
-							<nav class="navbar navbar-expand navbar-light bg-white flex-md-column flex-row align-items-start">
-								<div class="collapse navbar-collapse">
-									<ul class="flex-md-column flex-row navbar-nav w-100 justify-content-between">
-										<ul class="list-unstyled ps-0">
-											<li class="mb-1">
-												<button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
-													Dashboard
-													</button>
-												
-												<div class="collapse show" id="home-collapse">
-												<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-													<li><a href="#" class="link-dark rounded">Kalender</a></li>
-													<li><a href="#" class="link-dark rounded">Documenten</a></li>
-													<li><a href="#" class="link-dark rounded">Support</a></li>
-												</ul>
-												</div>
-											</li>
-											<li class="mb-1">
-												<button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
-												Overzicht Onboarding
-												</button>
-												<div class="collapse" id="dashboard-collapse">
-												
-												</div>
-											</li>
-											
-											<li class="border-top my-3"></li>
-											<li class="mb-1">
-												<button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
-												Account
-												</button>
-												<div class="collapse" id="account-collapse">
-												<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-													<li><a href="#" class="link-dark rounded">Profiel</a></li>
-													<li><a href="#" class="link-dark rounded">Instellingen</a></li>
-													<li><a href="#" class="link-dark rounded">Uitloggen</a></li>
-												</ul>
-												</div>
-											</li>
-											</ul>
-										..
-									</ul>
-								</div>
-							</nav>
-						</aside>
+		<!-- Bootstrap NavBar -->
+		<nav class="navbar navbar-expand-md navbar-dark top-nav" style="background-color: #A7002B;">
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<a class="navbar-brand" href="#">
+				<img src="images/simac-klein.png" width="30" height="30" class="d-inline-block align-top" alt="Simac_logo">
+				<span class="menu-collapsed">Brand</span>
+			</a>
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#top">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#top">Features</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#top">Pricing</a>
+					</li>
+					<!-- This menu is hidden in bigger devices with d-sm-none. 
+				The sidebar isn't proper for smaller screens imo, so this dropdown menu can keep all the useful sidebar itens exclusively for smaller screens  -->
+					<li class="nav-item dropdown d-sm-block d-md-none">
+						<a class="nav-link dropdown-toggle" href="#" id="smallerscreenmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Menu </a>
+						<div class="dropdown-menu" aria-labelledby="smallerscreenmenu">
+							<a class="dropdown-item" href="#top">hjsahgjsa</a>
+							<a class="dropdown-item" href="#top">Profile</a>
+							<a class="dropdown-item" href="#top">Tasks</a>
+							<a class="dropdown-item" href="#top">Etc ...</a>
 						</div>
-					</div>
-				</div>
+					</li><!-- Smaller devices menu END -->
+				</ul>
 			</div>
-			<!-- End Sidebar -->
-		</div>
-		<!--End wrapper-->
-
+		</nav><!-- NavBar END -->
+		<!-- Bootstrap row -->
+		<div class="row" id="body-row">
+			<!-- Sidebar -->
+			<div id="sidebar-container" class="sidebar-expanded d-none d-md-block">
+				<!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
+				<!-- Bootstrap List Group -->
+				<ul class="list-group" style="background-color: #333;">
+					<!-- Separator with title -->
+					<li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed" style="background-color: #333;">
+						<small>Navigatie</small>
+					</li>
+					<!-- /END Separator -->
+					<!-- Menu with submenu -->
+					<a href="#submenu1" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+						<div class="d-flex w-100 justify-content-start align-items-center">
+							<span class="fa fa-dashboard fa-fw mr-3"></span>
+							<span class="menu-collapsed">Dashboard</span>
+							<!-- <span class="submenu-icon ml-auto"></span> -->
+						</div>
+					</a>
+					<!-- Submenu content -->
+					<!-- <div id='submenu1' class="collapse sidebar-submenu">
+						<a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+							<span class="menu-collapsed">Chahgag</span>
+						</a>
+						<a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+							<span class="menu-collapsed">Reports</span>
+						</a>
+						<a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+							<span class="menu-collapsed">Tables</span>
+						</a>
+					</div> -->
+					<a href="#submenu2" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+						<div class="d-flex w-100 justify-content-start align-items-center">
+							<span class="fa fa-user fa-fw mr-3"></span>
+							<span class="menu-collapsed">Nieuwe werknemer aanmaken</span>
+							<span class="submenu-icon ml-auto"></span>
+						</div>
+					</a>
+					<!-- Submenu content -->
+					<!-- <div id='submenu2' class="collapse sidebar-submenu">
+						<a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+							<span class="menu-collapsed">Settings</span>
+						</a>
+						<a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+							<span class="menu-collapsed">Password</span>
+						</a>
+					</div> -->
+					<a href="#" class="bg-dark list-group-item list-group-item-action">
+						<div class="d-flex w-100 justify-content-start align-items-center">
+							<span class="fa fa-tasks fa-fw mr-3"></span>
+							<span class="menu-collapsed">Actieve onboardingen</span>
+						</div>
+					</a>
+					<a href="#" class="bg-dark list-group-item list-group-item-action">
+						<div class="d-flex w-100 justify-content-start align-items-center">
+							<span class="fa fa-check-square fa-fw mr-3"></span>
+							<span class="menu-collapsed">Aanvraagdocumenten</span>
+						</div>
+					</a>
+					<!-- Separator with title -->
+					<!-- <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed" style="background-color: #333;">
+						<small>OPTIONS</small>
+					</li> -->
+					<!-- /END Separator -->
+					<a href="#" class="bg-dark list-group-item list-group-item-action">
+						<div class="d-flex w-100 justify-content-start align-items-center">
+							<span class="fa fa-calendar fa-fw mr-3"></span>
+							<span class="menu-collapsed">Kalender</span>
+						</div>
+					</a>
+					<a href="#" class="bg-dark list-group-item list-group-item-action">
+						<div class="d-flex w-100 justify-content-start align-items-center">
+							<span class="fa fa-envelope-o fa-fw mr-3"></span>
+							<span class="menu-collapsed">Berichten <span class="badge badge-pill badge-primary ml-2">5</span></span>
+						</div>
+					</a>
+					<!-- Separator without title -->
+					<li class="list-group-item sidebar-separator menu-collapsed" style="background-color: #333;"></li>
+					<!-- /END Separator -->
+					<a href="#" class="bg-dark list-group-item list-group-item-action">
+						<div class="d-flex w-100 justify-content-start align-items-center">
+							<span class="fa fa-question fa-fw mr-3"></span>
+							<span class="menu-collapsed">Help</span>
+						</div>
+					</a>
 					
-
-		
-		<!--wrapper-->
-		<div class="wrapper">
-
-			<!--start page wrapper -->
-			<div class="page-wrapper">
-				<div class="page-content">
-					<div class="row">
-						<!-- Tabel is op mobiel, tablet en desktop 100% -->
-						<div class="card radius-10">
-						<div class="card-body">
-						<div class="col-12 col-md-12 col-lg-12"> 
-							<div class="row clearfix">
-								<div class="container">
-									<header>
-										<h3>Werknemers</h3>
-									</header>
-									<div class="table-wrapper">
-										<table class="table-users col-12 col-md-12 col-lg-12">
-											<tr>
-											<th>Voornaam</th>
-											<th>Achternaam</th>
-											<th>Telefoonnummer</th>
-											<th>Email</th>
-											<th>Datum</th>
-											<th>Bewerken/verwijderen</th>
-											</tr>
-										</table>
-									<button type="button" class="btn btn-add btn-outline-secondary px-5">Voeg werknemer toe</button>
+				</ul><!-- List Group END-->
+			</div><!-- sidebar-container END -->
+			<!-- MAIN -->
+			<div class="col p-4">
+				<div class="card radius-10">
+					<div class="card-body">
+					<div class="col-12 col-md-12 col-lg-12"> 
+						<div class="row clearfix">
+							<div class="container">
+								<header>
+									<h3>Werknemers</h3>
+								</header>
+								<div class="table-wrapper">
+									<table class="table-users col-12 col-md-12 col-lg-12">
+										<tr>
+										<th>Voornaam</th>
+										<th>Achternaam</th>
+										<th>Telefoonnummer</th>
+										<th>Email</th>
+										<th>Datum</th>
+										<th>Bewerken/verwijderen</th>
+										</tr>
+									</table>
+								<button type="button" class="btn btn-add btn-outline-secondary px-5">Voeg werknemer toe</button>
+								</div>
+							</div>
+								<!-- Add Modal -->
+							<div class="container">
+								<div class="col-12 col-md-12 col-lg-12 add-employee modal-wrapper3">
+								<div class="employee">
+									<div class="modal-header3"><h3>Voeg nieuwe werknemer toe</h3></div>
+									<div class="modal-body3">
+									<form class="form" autocomplete="off">
+										<input type="text" name="firstName" placeholder="Voornaam">
+										<input type="text" name="lastName" placeholder="Achternaam">
+										<input type="number" name="phone" placeholder="Telefoonnummer">
+										<input type="email" name="email" placeholder="Email">
+										<input type="date" name="date" placeholder="Datum">
+										<button class="btn btn-employee btn-outline-secondary">Opslaan</button>
+									</form>
 									</div>
 								</div>
-									<!-- Add Modal -->
-								<div class="container">
-									<div class="col-12 col-md-12 col-lg-12 add-employee modal-wrapper3">
-									<div class="employee">
-										<div class="modal-header3"><h3>Voeg nieuwe werknemer toe</h3></div>
-										<div class="modal-body3">
-										<form class="form" autocomplete="off">
-											<input type="text" name="firstName" placeholder="Voornaam">
-											<input type="text" name="lastName" placeholder="Achternaam">
-											<input type="number" name="phone" placeholder="Telefoonnummer">
-											<input type="email" name="email" placeholder="Email">
-											<input type="date" name="date" placeholder="Datum">
-											<button class="btn btn-employee btn-outline-secondary">Opslaan</button>
-										</form>
+								</div>
+							
+							
+								<!-- Edit Modal -->
+								<div class="edit-employee modal-wrapper3">
+								<div class="employee">
+									<div class="modal-header3"><h3>Bewerk Werknemer</h3></div>
+									<div class="modal-body3">
+									<form class="form" autocomplete="off">
+										<input type="text" name="firstName" placeholder="Voornaam">
+										<input type="text" name="lastName" placeholder="Achternaam">
+										<input type="number" name="phone" placeholder="Telefoonnummer">
+										<input type="email" name="email" placeholder="Email">
+										<input type="date" name="date" placeholder="Datum">
+										<button class="btn btn-employee btn-outline-secondary">Opslaan</button>
+									</form>
+									</div>
+								</div>
+								</div>
+									
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div><!-- Main Col END -->
+		</div><!-- body-row END -->
+
+
+<!--wrapper-->
+<div class="wrapper">
+
+	<!--start page wrapper -->
+	<div class="page-wrapper">
+		<div class="page-content">
+			<div class="row">
+				<!-- Tabel is op mobiel, tablet en desktop 100% -->
+				
+			</div>   
+			</div>
+		</div>
+	
+	<!-- End wrapper -->
+
+		
+	<!--start page wrapper -->
+	<div class="page-wrapper">
+		<div class="page-content">
+			<div class="row clearfix">
+				
+			</div>   
+		</div>
+	</div>
+	<!-- End wrapper -->
+
+
+
+
+	<!--start page wrapper -->
+	<div class="page-wrapper">
+		<div class="page-content">
+			<div class="row clearfix">
+
+
+				<section class="timeline_area section_padding_130">
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-12 col-sm-8 col-lg-6">
+								<!-- Section Heading-->
+								<div class="section_heading text-left">
+									<h6>Takenlijst</h6>
+									<h3>Taken voor komende dagen</h3>
+									<div class="line"></div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<!-- Timeline Area-->
+								<div class="apland-timeline-area">
+									<!-- Single Timeline Content-->
+									<div class="single-timeline-area">
+										<div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+											<p>1-2-2021</p>
 										</div>
-									</div>
-									</div>
-								
-								
-									<!-- Edit Modal -->
-									<div class="edit-employee modal-wrapper3">
-									<div class="employee">
-										<div class="modal-header3"><h3>Bewerk Werknemer</h3></div>
-										<div class="modal-body3">
-										<form class="form" autocomplete="off">
-											<input type="text" name="firstName" placeholder="Voornaam">
-											<input type="text" name="lastName" placeholder="Achternaam">
-											<input type="number" name="phone" placeholder="Telefoonnummer">
-											<input type="email" name="email" placeholder="Email">
-											<input type="date" name="date" placeholder="Datum">
-											<button class="btn btn-employee btn-outline-secondary">Opslaan</button>
-										</form>
+										<div class="row">
+											<div class="col-12 col-md-6 col-lg-4">
+												<div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+													<div class="timeline-icon"><i class="fa fa-address-card" aria-hidden="true"></i></div>
+													<div class="timeline-text">
+														<h6>Kennismaking met nieuwe collega's</h6>
+														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+													</div>
+												</div>
+											</div>
+											<div class="col-12 col-md-6 col-lg-4">
+												<div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+													<div class="timeline-icon"><i class="fa fa-archive" aria-hidden="true"></i></div>
+													<div class="timeline-text">
+														<h6>Fixed bug</h6>
+														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+													</div>
+												</div>
+											</div>
+											<div class="col-12 col-md-6 col-lg-4">
+												<div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
+													<div class="timeline-icon"><i class="fa fa-address-book" aria-hidden="true"></i></div>
+													<div class="timeline-text">
+														<h6>Reach 1k Users</h6>
+														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+													</div>
+												</div>
+											</div>
 										</div>
-									</div>
-									</div>
 										
+									</div>
+									<!-- Single Timeline Content-->
+									<div class="single-timeline-area">
+										<div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+											<p>2020</p>
+										</div>
+										<div class="row">
+											<div class="col-12 col-md-6 col-lg-4">
+												<div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+													<div class="timeline-icon"><i class="fa fa-briefcase" aria-hidden="true"></i></div>
+													<div class="timeline-text">
+														<h6>Updated 4.4.0</h6>
+														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+													</div>
+												</div>
+											</div>
+											<div class="col-12 col-md-6 col-lg-4">
+												<div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+													<div class="timeline-icon"><i class="fa fa-desktop" aria-hidden="true"></i></div>
+													<div class="timeline-text">
+														<h6>Fixed bug</h6>
+														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Single Timeline Content-->
+									<div class="single-timeline-area">
+										<div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+											<p>2019</p>
+										</div>
+										<div class="row">
+											<div class="col-12 col-md-6 col-lg-4">
+												<div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+													<div class="timeline-icon"><i class="fa fa-id-card" aria-hidden="true"></i></div>
+													<div class="timeline-text">
+														<h6>Updated 4.0</h6>
+														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+													</div>
+												</div>
+											</div>
+											<div class="col-12 col-md-6 col-lg-4">
+												<div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+													<div class="timeline-icon"><i class="fa fa-desktop" aria-hidden="true"></i></div>
+													<div class="timeline-text">
+														<h6>Fixed bug</h6>
+														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+													</div>
+												</div>
+											</div>
+											<div class="col-12 col-md-6 col-lg-4">
+												<div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
+													<div class="timeline-icon"><i class="fa fa-picture-o" aria-hidden="true"></i></div>
+													<div class="timeline-text">
+														<h6>Reach 500 Users</h6>
+														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-12 col-md-6 col-lg-4">
+												<div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+													<div class="timeline-icon"><i class="fa fa-address-card" aria-hidden="true"></i></div>
+													<div class="timeline-text">
+														<h6>Updated 5.0</h6>
+														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+													</div>
+												</div>
+											</div>
+											<div class="col-12 col-md-6 col-lg-4">
+												<div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+													<div class="timeline-icon"><i class="fa fa-archive" aria-hidden="true"></i></div>
+													<div class="timeline-text">
+														<h6>Fixed bug</h6>
+														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+													</div>
+												</div>
+											</div>
+											<div class="col-12 col-md-6 col-lg-4">
+												<div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
+													<div class="timeline-icon"><i class="fa fa-address-book" aria-hidden="true"></i></div>
+													<div class="timeline-text">
+														<h6>Reach 1k Users</h6>
+														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					</div>   
-					</div>
-				</div>
+				</section>
 			</div>
-			<!-- End wrapper -->
-
-		
-			<!--start page wrapper -->
-			<div class="page-wrapper">
-				<div class="page-content">
-					<div class="row clearfix">
-						
-					</div>   
-				</div>
-			</div>
-			<!-- End wrapper -->
-
-
-
-
-			<!--start page wrapper -->
-			<div class="page-wrapper">
-				<div class="page-content">
-					<div class="row clearfix">
-
-
-						<section class="timeline_area section_padding_130">
-							<div class="container">
-								<div class="row justify-content-center">
-									<div class="col-12 col-sm-8 col-lg-6">
-										<!-- Section Heading-->
-										<div class="section_heading text-left">
-											<h6>Takenlijst</h6>
-											<h3>Taken voor komende dagen</h3>
-											<div class="line"></div>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-12">
-										<!-- Timeline Area-->
-										<div class="apland-timeline-area">
-											<!-- Single Timeline Content-->
-											<div class="single-timeline-area">
-												<div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
-													<p>1-2-2021</p>
-												</div>
-												<div class="row">
-													<div class="col-12 col-md-6 col-lg-4">
-														<div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-															<div class="timeline-icon"><i class="fa fa-address-card" aria-hidden="true"></i></div>
-															<div class="timeline-text">
-																<h6>Kennismaking met nieuwe collega's</h6>
-																<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-															</div>
-														</div>
-													</div>
-													<div class="col-12 col-md-6 col-lg-4">
-														<div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
-															<div class="timeline-icon"><i class="fa fa-archive" aria-hidden="true"></i></div>
-															<div class="timeline-text">
-																<h6>Fixed bug</h6>
-																<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-															</div>
-														</div>
-													</div>
-													<div class="col-12 col-md-6 col-lg-4">
-														<div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
-															<div class="timeline-icon"><i class="fa fa-address-book" aria-hidden="true"></i></div>
-															<div class="timeline-text">
-																<h6>Reach 1k Users</h6>
-																<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-															</div>
-														</div>
-													</div>
-												</div>
-												
-											</div>
-											<!-- Single Timeline Content-->
-											<div class="single-timeline-area">
-												<div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
-													<p>2020</p>
-												</div>
-												<div class="row">
-													<div class="col-12 col-md-6 col-lg-4">
-														<div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-															<div class="timeline-icon"><i class="fa fa-briefcase" aria-hidden="true"></i></div>
-															<div class="timeline-text">
-																<h6>Updated 4.4.0</h6>
-																<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-															</div>
-														</div>
-													</div>
-													<div class="col-12 col-md-6 col-lg-4">
-														<div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
-															<div class="timeline-icon"><i class="fa fa-desktop" aria-hidden="true"></i></div>
-															<div class="timeline-text">
-																<h6>Fixed bug</h6>
-																<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<!-- Single Timeline Content-->
-											<div class="single-timeline-area">
-												<div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
-													<p>2019</p>
-												</div>
-												<div class="row">
-													<div class="col-12 col-md-6 col-lg-4">
-														<div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-															<div class="timeline-icon"><i class="fa fa-id-card" aria-hidden="true"></i></div>
-															<div class="timeline-text">
-																<h6>Updated 4.0</h6>
-																<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-															</div>
-														</div>
-													</div>
-													<div class="col-12 col-md-6 col-lg-4">
-														<div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
-															<div class="timeline-icon"><i class="fa fa-desktop" aria-hidden="true"></i></div>
-															<div class="timeline-text">
-																<h6>Fixed bug</h6>
-																<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-															</div>
-														</div>
-													</div>
-													<div class="col-12 col-md-6 col-lg-4">
-														<div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
-															<div class="timeline-icon"><i class="fa fa-picture-o" aria-hidden="true"></i></div>
-															<div class="timeline-text">
-																<h6>Reach 500 Users</h6>
-																<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-12 col-md-6 col-lg-4">
-														<div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-															<div class="timeline-icon"><i class="fa fa-address-card" aria-hidden="true"></i></div>
-															<div class="timeline-text">
-																<h6>Updated 5.0</h6>
-																<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-															</div>
-														</div>
-													</div>
-													<div class="col-12 col-md-6 col-lg-4">
-														<div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
-															<div class="timeline-icon"><i class="fa fa-archive" aria-hidden="true"></i></div>
-															<div class="timeline-text">
-																<h6>Fixed bug</h6>
-																<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-															</div>
-														</div>
-													</div>
-													<div class="col-12 col-md-6 col-lg-4">
-														<div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
-															<div class="timeline-icon"><i class="fa fa-address-book" aria-hidden="true"></i></div>
-															<div class="timeline-text">
-																<h6>Reach 1k Users</h6>
-																<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</section>
-					</div>
-				</div>
-			</div>
-
 		</div>
-		<!-- End wrapper -->
+	</div>
 
+</div>
+		<!-- End wrapper -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+	<script>
+		// Hide submenus
+$('#body-row .collapse').collapse('hide'); 
+
+// Collapse/Expand icon
+$('#collapse-icon').addClass('fa-angle-double-left'); 
+
+// Collapse click
+$('[data-toggle=sidebar-colapse]').click(function() {
+    SidebarCollapse();
+});
+
+function SidebarCollapse () {
+    $('.menu-collapsed').toggleClass('d-none');
+    $('.sidebar-submenu').toggleClass('d-none');
+    $('.submenu-icon').toggleClass('d-none');
+    $('#sidebar-container').toggleClass('sidebar-expanded sidebar-collapsed');
+    
+    // Treating d-flex/d-none on separators with title
+    var SeparatorTitle = $('.sidebar-separator-title');
+    if ( SeparatorTitle.hasClass('d-flex') ) {
+        SeparatorTitle.removeClass('d-flex');
+    } else {
+        SeparatorTitle.addClass('d-flex');
+    }
+    
+    // Collapse/Expand icon
+    $('#collapse-icon').toggleClass('fa-angle-double-left fa-angle-double-right');
+}
+	</script>
+	
+	
+	
+	
+	
 	
 	<script>
 		const btnDelete = document.querySelector(`[data-id='${doc.id}'] .btn-delete`);
