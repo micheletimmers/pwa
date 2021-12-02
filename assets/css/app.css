@@ -9,7 +9,10 @@
   width: 20%;
 }
 
-.navbar {
+@media only screen and (min-width: 450px) {
+  #little-nav {
+    display: none;
+  }
 }
 
 /* Sidebar sizes when expanded and expanded */
