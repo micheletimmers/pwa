@@ -15,7 +15,7 @@
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 		<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 		<link href="assets/css/dashboard.css" rel="stylesheet">
-		
+		<link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/list-groups/">
 		
     </head>
 
@@ -90,11 +90,25 @@
 				<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
 				<!-- MAIN -->
 				<div class="col p-4">
-					<div class="card radius-10">
+					
+						<div class="card text-white mb-3 " style="max-width: 18rem; background-color: #a7002b;">
+							<div class="card-header text-center"><h3>Actieve onboardingen</h3></div>
+							<div class="card-body">
+							  
+							  <div class="value text-center" akhi="3" style="font-size: 50px;">0</div>
+							  <p class="card-text text-center">Op dit moment zijn er 3 werknemers bezig met de onboarding. Klik hier om de actieve werknemers te zien.</p>
+							</div>
+						  </div>
+					
+
+					<div class="card radius-10 shadow-sm p-3 mb-3 bg-body rounded">
 						<div class="card-body">
 							<div class="col-12 col-md-12 col-lg-12"> 
 								<div class="row clearfix">
 									<div class="container">
+										<div class="container">
+											
+    
 										<header>
 											<h3>Werknemers</h3>
 										</header>
@@ -112,7 +126,7 @@
 										<button type="button" class="btn btn-add btn-outline-secondary px-5">Voeg werknemer toe</button>
 										</div>
 									</div>
-										<!-- Add Modal -->
+									<!-- Add Modal -->
 									<div class="container">
 										<div class="col-12 col-md-12 col-lg-12 add-employee modal-wrapper3">
 										<div class="employee">
@@ -129,9 +143,13 @@
 											</div>
 										</div>
 										</div>
+									</div>
+									<!-- End Add Modal -->
 									
 									
-										<!-- Edit Modal -->
+									<!-- Edit Modal -->
+									<div class="container">
+										<div class="col-12 col-md-12 col-lg-12 add-employee">
 										<div class="edit-employee modal-wrapper3">
 										<div class="employee">
 											<div class="modal-header3"><h3>Bewerk Werknemer</h3></div>
@@ -146,14 +164,73 @@
 											</form>
 											</div>
 										</div>
+										</div>
+										
 										</div>	
+									</div>
+									<!-- End Edit Modal -->
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					
+					</div>
+					<div class="card radius-10 shadow-sm p-3 mb-5 bg-body rounded">
+						<div class="card-body ">
+							<div class="col-12 col-md-12 col-lg-12"> 
+								<div class="row clearfix">
+									<div class="container">
+										<!-- Takenlijst -->
+										<div class="list-group">
+											<label class="list-group-item d-flex gap-3">
+											<input class="form-check-input flex-shrink-0" type="checkbox" value="" checked style="font-size: 1.375em;">
+											<span class="pt-1 form-checked-content">
+												<strong>Finish sales report</strong>
+												<small class="d-block text-muted">
+												<svg class="bi me-1" width="1em" height="1em"><use xlink:href="#calendar-event"/></svg>
+												1:00–2:00pm
+												</small>
+											</span>
+											</label>
+											<label class="list-group-item d-flex gap-3">
+											<input class="form-check-input flex-shrink-0" type="checkbox" value="" style="font-size: 1.375em;">
+											<span class="pt-1 form-checked-content">
+												<strong>Weekly All Hands</strong>
+												<small class="d-block text-muted">
+												<svg class="bi me-1" width="1em" height="1em"><use xlink:href="#calendar-event"/></svg>
+												2:00–2:30pm
+												</small>
+											</span>
+											</label>
+											<label class="list-group-item d-flex gap-3">
+											<input class="form-check-input flex-shrink-0" type="checkbox" value="" style="font-size: 1.375em;">
+											<span class="pt-1 form-checked-content">
+												<strong>Out of office</strong>
+												<small class="d-block text-muted">
+												<svg class="bi me-1" width="1em" height="1em"><use xlink:href="#alarm"/></svg>
+												Tomorrow
+												</small>
+											</span>
+											</label>
+											<label class="list-group-item d-flex gap-3 bg-light">
+											<input class="form-check-input form-check-input-placeholder bg-light flex-shrink-0" disabled type="checkbox" value="" style="font-size: 1.375em;">
+											<span class="pt-1 form-checked-content">
+												<span contenteditable="true" class="w-100">Add new task...</span>
+												<small class="d-block text-muted">
+												<svg class="bi me-1" width="1em" height="1em"><use xlink:href="#list-check"/></svg>
+												Choose list...
+												</small>
+											</span>
+											</label>
+										</div>
+										<!-- Einde Takenlijst -->
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-	
 				</div>
 			</main>
 
@@ -164,19 +241,6 @@
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-	<script>
-		const btnDelete = document.querySelector(`[data-id='${doc.id}'] .btn-delete`);
-		btnDelete.addEventListener('click', () => {
-		editModal.classList.add('modal-show3');
-
-			db.collection('users').doc(`${doc.id}`).delete().then(() => {
-			console.log('Document succesfully deleted!');
-			}).catch(err => {
-			console.log('Error removing document', err);
-			});
-		});
-
-	</script>
 
 	<!-- The core Firebase JS SDK is always required and must be listed first -->
 	<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
@@ -208,5 +272,36 @@
 
 	<script src="assets/js/sidebars.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+	<!-- Animatie cijfers  -->
+	<script>
+		const counters = document.querySelectorAll('.value');
+		const speed = 200;
+
+		counters.forEach( counter => {
+		const animate = () => {
+			const value = +counter.getAttribute('akhi');
+			const data = +counter.innerText;
+			
+			const time = value / speed;
+			if(data < value) {
+				counter.innerText = Math.ceil(data + time);
+				setTimeout(animate, 1000);
+				}else{
+				counter.innerText = value;
+				}
+			
+		}
+		
+		animate();
+		});
+
+  
+	</script>
 </body>
 </html>
+
+
+
+
+

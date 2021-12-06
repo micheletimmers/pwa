@@ -23,7 +23,7 @@ const renderUser = doc => {
       <td>${doc.data().email}</td>
       <td>${doc.data().date}</td>
       <td>
-        <button class="btn btn-edit">Bewerk</button>
+        <button class="btn btn-edit">Bekijk/Bewerk</button>
         <button class="btn btn-delete">Verwijder</button>
       </td>
     </tr>

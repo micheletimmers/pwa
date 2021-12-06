@@ -96,12 +96,12 @@
 								<div class="card-body">
 
 								<header>
-									<h3>Nieuwe werknemer</h3>
+									<h3>Voeg nieuwe werknemer toe</h3>
 								</header>
 								<!-- Add Werknemer -->
 								<div class="col-12 col-md-12 col-lg-12 add-employee">
 									<div class="employee">
-										<div class=""><h3>Voeg nieuwe werknemer toe</h3></div>
+										
 										<form class="form row g-3" autocomplete="off">
 											<div class="col-md-6">
 												<label for="inputEmail4" class="form-label">Voornaam</label>
@@ -127,6 +127,7 @@
 												<button class="btn btn-employee btn-outline-secondary">Opslaan</button>
 												
 											</div>
+											
 										</form>
 									</div>
 								</div>
@@ -186,20 +187,7 @@
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-	<script>
-		const btnDelete = document.querySelector(`[data-id='${doc.id}'] .btn-delete`);
-		btnDelete.addEventListener('click', () => {
-		editModal.classList.add('modal-show3');
-
-			db.collection('users').doc(`${doc.id}`).delete().then(() => {
-			console.log('Document succesfully deleted!');
-			}).catch(err => {
-			console.log('Error removing document', err);
-			});
-		});
-
-	</script>
-
+	
 	<!-- The core Firebase JS SDK is always required and must be listed first -->
 	<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
 
