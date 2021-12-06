@@ -61,24 +61,6 @@
 .employee {
   position: relative;
   background: #fff;
-  text-align: center;
-
-  -webkit-box-shadow: 0px 4px 22px -6px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 4px 22px -6px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 4px 22px -6px rgba(0, 0, 0, 0.75);
-  animation-name: animatetop;
-  animation-duration: 0.4s;
-}
-
-@keyframes animatetop {
-  from {
-    top: -300px;
-    opacity: 0;
-  }
-  to {
-    top: 0;
-    opacity: 1;
-  }
 }
 
 .modal-show3 {

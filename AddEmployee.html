@@ -4,205 +4,139 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="theme-color" content="#009578">
-        <title>Michèle Timmers lala</title>
+        <title>Michèle Timmers PWA</title>
 		<link href="assets/css/sidebars.css" rel="stylesheet">
 		<link href="assets/css/app.css" rel="stylesheet">
         <link rel="stylesheet" href="src/master.css">
         <link rel="manifest" href="manifest.json">
         <link rel="apple-touch-icon" href="images/logo192.png">
 
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-
+		<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link href="assets/css/dashboard.css" rel="stylesheet">
 		
 		
     </head>
 
 	
     <body>
-
-		<!-- Bootstrap NavBar -->
-		<nav class="navbar navbar-expand-md navbar-dark top-nav" style="background-color: #A7002B;">
-			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<a class="navbar-brand" href="#">
-				<img src="images/simac-klein.png" width="30" height="30" class="d-inline-block align-top" alt="Simac_logo">
-				<span class="menu-collapsed">Simac</span>
-			</a>
-			<div class="collapse navbar-collapse" id="navbarNavDropdown">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="#top">Dashboard <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#top">Nieuwe werknemer aanmaken</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#top">Actieve onboardingen</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#top">Aanvraag documenten</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#top">Kalender</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#top">Berichten</a>
-					</li>
-					<!-- This menu is hidden in bigger devices with d-sm-none. 
-				The sidebar isn't proper for smaller screens imo, so this dropdown menu can keep all the useful sidebar itens exclusively for smaller screens  -->
-					<li class="nav-item dropdown d-sm-block d-md-none">
-						<a class="nav-link dropdown-toggle" href="#" id="smallerscreenmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Menu </a>
-						<div class="dropdown-menu" aria-labelledby="smallerscreenmenu">
-							<a class="dropdown-item" href="#top">hjsahgjsa</a>
-							<a class="dropdown-item" href="#top">Profile</a>
-							<a class="dropdown-item" href="#top">Tasks</a>
-							<a class="dropdown-item" href="#top">Etc ...</a>
-						</div>
-					</li><!-- Smaller devices menu END -->
-				</ul>
-			</div>
-		</nav><!-- NavBar END -->
-		<!-- Bootstrap row -->
-		<div class="row" id="body-row">
-			<!-- Sidebar -->
-			<div id="sidebar-container" class="sidebar-expanded d-none d-md-block">
-				<!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
-				<!-- Bootstrap List Group -->
-				<ul class="list-group" style="background-color: #333;">
-					<!-- Separator with title -->
-					<li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed" style="background-color: #333;">
-						<small>Navigatie</small>
-					</li>
-					<!-- /END Separator -->
-					<!-- Menu with submenu -->
-					<a href="#submenu1" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
-						<div class="d-flex w-100 justify-content-start align-items-center">
-							<span class="fa fa-dashboard fa-fw mr-3"></span>
-							<span class="menu-collapsed">Dashboard</span>
-							<!-- <span class="submenu-icon ml-auto"></span> -->
-						</div>
-					</a>
-					<!-- Submenu content -->
-					<!-- <div id='submenu1' class="collapse sidebar-submenu">
-						<a href="#" class="list-group-item list-group-item-action bg-dark text-white">
-							<span class="menu-collapsed">Chahgag</span>
+		    
+	<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+	<a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Simac Onboarding</a>
+	<button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+	  <span class="navbar-toggler-icon"></span>
+	</button>
+	<!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> -->
+	<div class="navbar-nav">
+	  <div class="nav-item text-nowrap">
+		<a class="nav-link px-3" href="#">Sign out</a>
+	  </div>
+	</div>
+  	</header>
+  
+	<div class="container-fluid">
+		<div class="row">
+			<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+				<div class="position-sticky pt-3">
+					<ul class="nav flex-column">
+						<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="index.html">
+							<span data-feather="home"></span>
+							Dashboard
 						</a>
-						<a href="#" class="list-group-item list-group-item-action bg-dark text-white">
-							<span class="menu-collapsed">Reports</span>
+						</li>
+						<li class="nav-item">
+						<a class="nav-link" href="#">
+							<span data-feather="file"></span>
+							Kalender/Takenlijst
 						</a>
-						<a href="#" class="list-group-item list-group-item-action bg-dark text-white">
-							<span class="menu-collapsed">Tables</span>
+						</li>
+						<li class="nav-item">
+						<a class="nav-link" href="AddEmployee.html">
+							<span data-feather="shopping-cart"></span>
+							Nieuwe werknemer aanmaken
 						</a>
-					</div> -->
-					<a href="#submenu2" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
-						<div class="d-flex w-100 justify-content-start align-items-center">
-							<span class="fa fa-user fa-fw mr-3"></span>
-							<span class="menu-collapsed">Nieuwe werknemer aanmaken</span>
-							<span class="submenu-icon ml-auto"></span>
-						</div>
-					</a>
-					<!-- Submenu content -->
-					<!-- <div id='submenu2' class="collapse sidebar-submenu">
-						<a href="#" class="list-group-item list-group-item-action bg-dark text-white">
-							<span class="menu-collapsed">Settings</span>
+						</li>
+						<li class="nav-item">
+						<a class="nav-link" href="#">
+							<span data-feather="users"></span>
+							Actieve onboardingen
 						</a>
-						<a href="#" class="list-group-item list-group-item-action bg-dark text-white">
-							<span class="menu-collapsed">Password</span>
+						</li>
+						<li class="nav-item">
+						<a class="nav-link" href="#">
+							<span data-feather="bar-chart-2"></span>
+							Documenten
 						</a>
-					</div> -->
-					<a href="#" class="bg-dark list-group-item list-group-item-action">
-						<div class="d-flex w-100 justify-content-start align-items-center">
-							<span class="fa fa-tasks fa-fw mr-3"></span>
-							<span class="menu-collapsed">Actieve onboardingen</span>
-						</div>
-					</a>
-					<a href="#" class="bg-dark list-group-item list-group-item-action">
-						<div class="d-flex w-100 justify-content-start align-items-center">
-							<span class="fa fa-check-square fa-fw mr-3"></span>
-							<span class="menu-collapsed">Aanvraagdocumenten</span>
-						</div>
-					</a>
-					<!-- Separator with title -->
-					<!-- <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed" style="background-color: #333;">
-						<small>OPTIONS</small>
-					</li> -->
-					<!-- /END Separator -->
-					<a href="#" class="bg-dark list-group-item list-group-item-action">
-						<div class="d-flex w-100 justify-content-start align-items-center">
-							<span class="fa fa-calendar fa-fw mr-3"></span>
-							<span class="menu-collapsed">Kalender</span>
-						</div>
-					</a>
-					<a href="#" class="bg-dark list-group-item list-group-item-action">
-						<div class="d-flex w-100 justify-content-start align-items-center">
-							<span class="fa fa-envelope-o fa-fw mr-3"></span>
-							<span class="menu-collapsed">Berichten <span class="badge badge-pill badge-primary ml-2">5</span></span>
-						</div>
-					</a>
-					<!-- Separator without title -->
-					<li class="list-group-item sidebar-separator menu-collapsed" style="background-color: #333;"></li>
-					<!-- /END Separator -->
-					<a href="#" class="bg-dark list-group-item list-group-item-action">
-						<div class="d-flex w-100 justify-content-start align-items-center">
-							<span class="fa fa-question fa-fw mr-3"></span>
-							<span class="menu-collapsed">Help</span>
-						</div>
-					</a>
-					
-				</ul><!-- List Group END-->
-			</div><!-- sidebar-container END -->
-
-
-
-			<div class="col p-4">
-			
-			<form>
-				<div class="form-row">
-				  <div class="form-group col-md-6">
-					<label for="inputEmail4">Voornaam</label>
-					<input type="text" name="firstName" class="form-control" id="inputEmail4" placeholder="Voornaam">
-				  </div>
-				  <div class="form-group col-md-6">
-					<label for="inputPassword4">Achternaam</label>
-					<input type="text" name="lastName" class="form-control" id="inputPassword4" placeholder="Achternaam">
-				  </div>
+						</li>
+						<li class="nav-item">
+						<a class="nav-link" href="#">
+							<span data-feather="layers"></span>
+							Archief
+						</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<span data-feather="layers"></span>
+								Profiel
+							</a>
+						</li>
+					</ul>
 				</div>
-				<div class="form-group">
-				  <label for="inputAddress">Telefoonnummer</label>
-				  <input type="number" name="phone" class="form-control" id="inputAddress" placeholder="Telefoonnummer">
-				</div>
-				<div class="form-group">
-				  <label for="inputAddress2">E-mail</label>
-				  <input ttype="email" name="email" class="form-control" id="inputAddress2" placeholder="Email">
-				</div>
-				<div class="form-row">
-				  <div class="form-group col-md-6">
-					<label for="inputCity">Datum</label>
-					<input type="date" name="date" class="form-control" id="inputCity">
-				  </div>
-				</div>
-				<br>
-				<button type="submit" class="btn btn-employee btn-outline-secondary">Opslaan</button>
-			  </form>
-			</div>
-			
-		</div><!-- body-row END -->	
-			
-			
-			
-			
-		<div class="row" id="body-row">
-			<!-- MAIN -->
-			<div class="col p-4">
-				<div class="card radius-10">
-					<div class="card-body">
+			</nav>
+
+			<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+				<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+				<!-- MAIN -->
 					<div class="col-12 col-md-12 col-lg-12"> 
 						<div class="row clearfix">
 							<div class="container">
+								<div class="card radius-10">
+								<div class="card-body">
+
 								<header>
-									<h3>Werknemers</h3>
+									<h3>Nieuwe werknemer</h3>
+								</header>
+								<!-- Add Werknemer -->
+								<div class="col-12 col-md-12 col-lg-12 add-employee">
+									<div class="employee">
+										<div class=""><h3>Voeg nieuwe werknemer toe</h3></div>
+										<form class="form row g-3" autocomplete="off">
+											<div class="col-md-6">
+												<label for="inputEmail4" class="form-label">Voornaam</label>
+												<input type="text" class="form-control" name="firstName" placeholder="Voornaam">
+											</div>
+											<div class="col-md-6">
+												<label for="inputPassword4" class="form-label">Achternaam</label>
+												<input type="text" class="form-control" name="lastName" placeholder="Achternaam">
+											</div>
+											<div class="col-12">
+												<label for="inputAddress" class="form-label">Telefoonnummer</label>
+												<input type="number" class="form-control" name="phone" placeholder="Telefoonnummer">
+											</div>
+											<div class="col-12">
+												<label for="inputAddress2" class="form-label">E-mail</label>
+												<input type="email" class="form-control" name="email" placeholder="Email">
+											</div>
+											<div class="col-md-6">
+												<label for="inputCity" class="form-label">Datum</label>
+												<input type="date" class="form-control" name="date" placeholder="Datum">
+											</div>
+											<div class="col-12">
+												<button class="btn btn-employee btn-outline-secondary">Opslaan</button>
+												
+											</div>
+										</form>
+									</div>
+								</div>
+								<!-- End Werknemer -->
+								</div>
+								</div>
+								
+								
+								<header>
+									<h4>Lijst met bestaande werknemers</h4>
 								</header>
 								<div class="table-wrapper">
 									<table class="table-users col-12 col-md-12 col-lg-12">
@@ -215,94 +149,43 @@
 										<th>Bewerken/verwijderen</th>
 										</tr>
 									</table>
-								<button type="button" class="btn btn-add btn-outline-secondary px-5">Voeg werknemer toe</button>
-								</div>
-							</div>
-								<!-- Add Modal -->
-							<div class="container">
-								<div class="col-12 col-md-12 col-lg-12 add-employee modal-wrapper3">
-								<div class="employee">
-									<div class="modal-header3"><h3>Voeg nieuwe werknemer toe</h3></div>
-									<div class="modal-body3">
-									<form class="form" autocomplete="off">
-										<input type="text" name="firstName" placeholder="Voornaam">
-										<input type="text" name="lastName" placeholder="Achternaam">
-										<input type="number" name="phone" placeholder="Telefoonnummer">
-										<input type="email" name="email" placeholder="Email">
-										<input type="date" name="date" placeholder="Datum">
-										<button class="btn btn-employee btn-outline-secondary">Opslaan</button>
-									</form>
-									</div>
-								</div>
-								</div>
-							
-							
-								<!-- Edit Modal -->
-								<div class="edit-employee modal-wrapper3">
-								<div class="employee">
-									<div class="modal-header3"><h3>Bewerk Werknemer</h3></div>
-									<div class="modal-body3">
-									<form class="form" autocomplete="off">
-										<input type="text" name="firstName" placeholder="Voornaam">
-										<input type="text" name="lastName" placeholder="Achternaam">
-										<input type="number" name="phone" placeholder="Telefoonnummer">
-										<input type="email" name="email" placeholder="Email">
-										<input type="date" name="date" placeholder="Datum">
-										<button class="btn btn-employee btn-outline-secondary">Opslaan</button>
-									</form>
-									</div>
-								</div>
-								</div>
 									
+								</div>
+								<!-- Edit Modal -->
+								<div class="container">
+									<!-- Edit Modal -->
+									<div class="edit-employee modal-wrapper3">
+									<div class="employee">
+										<div class="modal-header3"><h3>Bewerk Werknemer</h3></div>
+										<div class="modal-body3">
+										<form class="form" autocomplete="off">
+											<input type="text" name="firstName" placeholder="Voornaam">
+											<input type="text" name="lastName" placeholder="Achternaam">
+											<input type="number" name="phone" placeholder="Telefoonnummer">
+											<input type="email" name="email" placeholder="Email">
+											<input type="date" name="date" placeholder="Datum">
+											<!-- Deze moet hier blijven staan anders gaat het kapot -->
+											<button type="button" class="btn btn-add btn-outline-secondary px-5">Voeg werknemer toe</button>
+										</form>
+										
+										</div>
+									</div>
+									</div>	
+
+								</div>
+								<!-- End Modal -->
+								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-				</div>
-			</div><!-- Main Col END -->
-		</div><!-- body-row END -->
+			</main>
 
-
-
-
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-	<script>
-		// Hide submenus
-		$('#body-row .collapse').collapse('hide'); 
-
-		// Collapse/Expand icon
-		$('#collapse-icon').addClass('fa-angle-double-left'); 
-
-		// Collapse click
-		$('[data-toggle=sidebar-colapse]').click(function() {
-			SidebarCollapse();
-		});
-
-		function SidebarCollapse () {
-			$('.menu-collapsed').toggleClass('d-none');
-			$('.sidebar-submenu').toggleClass('d-none');
-			$('.submenu-icon').toggleClass('d-none');
-			$('#sidebar-container').toggleClass('sidebar-expanded sidebar-collapsed');
-			
-			// Treating d-flex/d-none on separators with title
-			var SeparatorTitle = $('.sidebar-separator-title');
-			if ( SeparatorTitle.hasClass('d-flex') ) {
-				SeparatorTitle.removeClass('d-flex');
-			} else {
-				SeparatorTitle.addClass('d-flex');
-			}
-			
-			// Collapse/Expand icon
-			$('#collapse-icon').toggleClass('fa-angle-double-left fa-angle-double-right');
-		}
-	</script>
+	</div>
+</div>
 	
-	
-	
-	
-	
-	
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 	<script>
 		const btnDelete = document.querySelector(`[data-id='${doc.id}'] .btn-delete`);
 		btnDelete.addEventListener('click', () => {
@@ -316,32 +199,35 @@
 		});
 
 	</script>
-	  <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
 	<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
-	
-	  <!-- TODO: Add SDKs for Firebase products that you want to use
-		  https://firebase.google.com/docs/web/setup#available-libraries -->
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+		https://firebase.google.com/docs/web/setup#available-libraries -->
 	<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
-	
+
 	<script>
-	// Your web app's Firebase configuration
-	const firebaseConfig = {
-		apiKey: "AIzaSyDGlesNckUR_ME2jd0EKSP3BieJVxpRldw",
-		authDomain: "pwa-simac.firebaseapp.com",
-		projectId: "pwa-simac",
-		storageBucket: "pwa-simac.appspot.com",
-		messagingSenderId: "1032055915418",
-		appId: "1:1032055915418:web:b551853ddee057f6a3b023",
-		measurementId: "G-V30NRLBKSB"
-	};
-	// Initialize Firebase
-	firebase.initializeApp(firebaseConfig);
-	const db = firebase.firestore();
+		// Your web app's Firebase configuration
+		const firebaseConfig = {
+			apiKey: "AIzaSyDGlesNckUR_ME2jd0EKSP3BieJVxpRldw",
+			authDomain: "pwa-simac.firebaseapp.com",
+			projectId: "pwa-simac",
+			storageBucket: "pwa-simac.appspot.com",
+			messagingSenderId: "1032055915418",
+			appId: "1:1032055915418:web:b551853ddee057f6a3b023",
+			measurementId: "G-V30NRLBKSB"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+		const db = firebase.firestore();
 	</script>
 	<script src="./script.js"></script>
-   
+	<script src="https://unpkg.com/feather-icons"></script>
+
     <script src="src/index.js"></script>
-	
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="dashboard.js"></script>
+
 	<script src="assets/js/sidebars.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
