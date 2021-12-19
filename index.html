@@ -5,317 +5,246 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="theme-color" content="#009578">
         <title>Michèle Timmers PWA</title>
-		<link href="assets/css/app.css" rel="stylesheet">
+        <link href="assets/css/app.css" rel="stylesheet">
         <link rel="stylesheet" href="src/master.css">
         <link rel="manifest" href="manifest.json">
         <link rel="apple-touch-icon" href="images/logo192.png">
 
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-		<link href="assets/css/dashboard.css" rel="stylesheet">
-		<link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/list-groups/">
-		
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+        <link href="assets/css/dashboard.css" rel="stylesheet">
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/list-groups/">
+        
     </head>
 
-	
-    <body>
-		    
-	<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-	<a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Simac Onboarding</a>
-	<button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-	  <span class="navbar-toggler-icon"></span>
-	</button>
-	<!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> -->
-	<div class="navbar-nav">
-	  <div class="nav-item text-nowrap">
-		<a class="nav-link px-3" href="#">Sign out</a>
-	  </div>
-	</div>
-  	</header>
-  
-	<div class="container-fluid">
-		<div class="row">
-			<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-				<div class="position-sticky pt-3">
-					<ul class="nav flex-column">
-						<li class="nav-item">
-						<a class="nav-link" aria-current="page" href="index.html">
-							<span data-feather="home"></span>
-							Dashboard
-						</a>
-						</li>
-						<li class="nav-item">
-						<a class="nav-link" href="#">
-							<span data-feather="file"></span>
-							Kalender/Takenlijst
-						</a>
-						</li>
-						<li class="nav-item">
-						<a class="nav-link" href="AddEmployee.html">
-							<span data-feather="circle"></span>
-							Nieuwe werknemer aanmaken
-						</a>
-						</li>
-						<li class="nav-item">
-						<a class="nav-link" href="#">
-							<span data-feather="users"></span>
-							Actieve onboardingen
-						</a>
-						</li>
-						<li class="nav-item">
-						<a class="nav-link" href="#">
-							<span data-feather="bar-chart-2"></span>
-							Documenten
-						</a>
-						</li>
-						<li class="nav-item">
-						<a class="nav-link" href="#">
-							<span data-feather="layers"></span>
-							Archief
-						</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">
-								<span data-feather="layers"></span>
-								Profiel
-							</a>
-						</li>
-					</ul>
-				</div>
-			</nav>
-
-			<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-				<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-				<!-- MAIN -->
-				<div class="col p-4">
-					
-						<div class="card text-white mb-3 " style="max-width: 18rem; background-color: #a7002b;">
-							<div class="card-header text-center"><h3>Actieve onboardingen</h3></div>
-							<div class="card-body">
-							  
-							  <div class="value text-center" akhi="3" style="font-size: 50px;">0</div>
-							  <p class="card-text text-center">Op dit moment zijn er 3 werknemers bezig met de onboarding. Klik hier om de actieve werknemers te zien.</p>
-							</div>
-						</div>
-
-						<div class="card text-white mb-3 " style="max-width: 18rem; background-color: #a7002b;">
-						<div class="card-header text-center"><h3>Actieve onboardingen</h3></div>
-						<div class="card-body">
-							
-							<div class="value text-center" akhi="3" style="font-size: 50px;">0</div>
-							<p class="card-text text-center">Op dit moment zijn er 3 werknemers bezig met de onboarding. Klik hier om de actieve werknemers te zien.</p>
-						</div>
-						</div>
-					
-
-					<div class="card radius-10 shadow-sm p-3 mb-3 bg-body rounded">
-						<div class="card-body">
-							<div class="col-12 col-md-12 col-lg-12"> 
-								<div class="row clearfix">
-									<div class="container">
-										<div class="container">
-											
     
-										<header>
-											<h3>Werknemers</h3>
-										</header>
-										<div class="table-wrapper">
-											<table class="table-users col-12 col-md-12 col-lg-12">
-												<tr>
-												<th>Voornaam</th>
-												<th>Achternaam</th>
-												<th>Telefoonnummer</th>
-												<th>Email</th>
-												<th>Datum</th>
-												<th>Taak</th>
-												<th>Bewerken/verwijderen</th>
-												</tr>
-											</table>
-										<button type="button" class="btn btn-add btn-outline-secondary px-5">Voeg werknemer toe</button>
-										</div>	
-										</div>
-									</div>
-									<!-- Add Modal -->
-									<div class="container">
-										<div class="col-12 col-md-12 col-lg-12 add-employee modal-wrapper3">
-										<div class="employee">
-											<div class="modal-header3"><h3>Voeg nieuwe werknemer toe</h3></div>
-											<div class="modal-body3">
-											<form class="form" autocomplete="off">
-												<input type="text" name="firstName" placeholder="Voornaam">
-												<input type="text" name="lastName" placeholder="Achternaam">
-												<input type="number" name="phone" placeholder="Telefoonnummer">
-												<input type="email" name="email" placeholder="Email">
-												<input type="date" name="date" placeholder="Datum">
-												<button class="btn btn-employee btn-outline-secondary">Opslaan</button>
-											</form>
-											</div>
-										</div>
-										</div>
-									</div>
-									<!-- End Add Modal -->
-									
-									
-									<!-- Edit Modal -->
-									<div class="container">
-										<div class="col-12 col-md-12 col-lg-12 add-employee">
-										<div class="edit-employee modal-wrapper3">
-										<div class="employee">
-											<div class="modal-header3"><h3>Bewerk Werknemer</h3></div>
-											<div class="modal-body3">
-											<form class="form" autocomplete="off">
-												<input type="text" name="firstName" placeholder="Voornaam">
-												<input type="text" name="lastName" placeholder="Achternaam">
-												<input type="number" name="phone" placeholder="Telefoonnummer">
-												<input type="email" name="email" placeholder="Email">
-												<input type="date" name="date" placeholder="Datum">
-												<button class="btn btn-employee btn-outline-secondary">Opslaan</button>
-											</form>
-											</div>
-										</div>
-										</div>
-										
-										</div>	
-									</div>
-									<!-- End Edit Modal -->
-								</div>
-							</div>
-							
-						</div>
-					</div>
-					
-					</div>
-					<div class="card radius-10 shadow-sm p-3 mb-5 bg-body rounded">
-						<div class="card-body ">
-							<div class="col-12 col-md-12 col-lg-12"> 
-								<div class="row clearfix">
-									<div class="container">
-										<!-- Takenlijst -->
-										<div class="list-group">
-											<label class="list-group-item d-flex gap-3">
-											<input class="form-check-input flex-shrink-0" type="checkbox" value="" checked style="font-size: 1.375em;">
-											<span class="pt-1 form-checked-content">
-												<strong>Finish sales report</strong>
-												<small class="d-block text-muted">
-												<svg class="bi me-1" width="1em" height="1em"><use xlink:href="#calendar-event"/></svg>
-												1:00–2:00pm
-												</small>
-											</span>
-											</label>
-											<label class="list-group-item d-flex gap-3">
-											<input class="form-check-input flex-shrink-0" type="checkbox" value="" style="font-size: 1.375em;">
-											<span class="pt-1 form-checked-content">
-												<strong>Weekly All Hands</strong>
-												<small class="d-block text-muted">
-												<svg class="bi me-1" width="1em" height="1em"><use xlink:href="#calendar-event"/></svg>
-												2:00–2:30pm
-												</small>
-											</span>
-											</label>
-											<label class="list-group-item d-flex gap-3">
-											<input class="form-check-input flex-shrink-0" type="checkbox" value="" style="font-size: 1.375em;">
-											<span class="pt-1 form-checked-content">
-												<strong>Out of office</strong>
-												<small class="d-block text-muted">
-												<svg class="bi me-1" width="1em" height="1em"><use xlink:href="#alarm"/></svg>
-												Tomorrow
-												</small>
-											</span>
-											</label>
-											<label class="list-group-item d-flex gap-3 bg-light">
-											<input class="form-check-input form-check-input-placeholder bg-light flex-shrink-0" disabled type="checkbox" value="" style="font-size: 1.375em;">
-											<span class="pt-1 form-checked-content">
-												<span contenteditable="true" class="w-100">Add new task...</span>
-												<small class="d-block text-muted">
-												<svg class="bi me-1" width="1em" height="1em"><use xlink:href="#list-check"/></svg>
-												Choose list...
-												</small>
-											</span>
-											</label>
-										</div>
-										<!-- Einde Takenlijst -->
+    <body>
+            
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Simac Onboarding</a>
+    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> -->
+    <div class="navbar-nav">
+      <div class="nav-item text-nowrap">
+        <a class="nav-link px-3" href="#">Sign out</a>
+      </div>
+    </div>
+    </header>
+  
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="position-sticky pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">
+                            <span data-feather="home"></span>
+                            Dashboard
+                        </a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span data-feather="file"></span>
+                            Kalender/Takenlijst
+                        </a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="AddEmployee.html">
+                            <span data-feather="circle"></span>
+                            Nieuwe werknemer aanmaken
+                        </a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span data-feather="users"></span>
+                            Actieve onboardingen
+                        </a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span data-feather="bar-chart-2"></span>
+                            Documenten
+                        </a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span data-feather="layers"></span>
+                            Archief
+                        </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="layers"></span>
+                                Profiel
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
 
-										
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>					
-				</div>
-				</div>
-			</main>
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <!-- MAIN -->
+                <!-- <div class="col p-4">
+                    
+                    <div class="card text-white mb-3 " style="max-width: 18rem; background-color: #a7002b;">
+                        <div class="card-header text-center"><h3>Actieve onboardingen</h3></div>
+                        <div class="card-body">
+                            
+                            <div class="value text-center" akhi="3" style="font-size: 50px;">0</div>
+                            <p class="card-text text-center">Op dit moment zijn er 3 werknemers bezig met de onboarding. Klik hier om de actieve werknemers te zien.</p>
+                        </div>
+                    </div>
 
-	</div>
+                    <div class="card text-white mb-3 " style="max-width: 18rem; background-color: #a7002b;">
+                        <div class="card-header text-center"><h3>Actieve onboardingen</h3></div>
+                        <div class="card-body">
+                            
+                            <div class="value text-center" akhi="3" style="font-size: 50px;">0</div>
+                            <p class="card-text text-center">Op dit moment zijn er 3 werknemers bezig met de onboarding. Klik hier om de actieve werknemers te zien.</p>
+                        </div>
+                    </div>
+                </div> -->
+                    
+
+                    <!-- ADD Werknemer -->
+                    <div class="container p-4">
+                        <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                            <div class="card-body">
+
+                                <h1 class="h4">Add werknemer</h1>
+
+                                <form id="user-form">
+                                <div class="form-group">
+                                    <input type="text" id="user-title" class="form-control" class="werknemer Title" placeholder="Voornaam"
+                                    autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <textarea id="userlastname-title" rows="3" class="form-control" placeholder="Achternaam"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" id="user-email" class="form-control" class="werknemer Title" placeholder="Email"
+                                    autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" id="user-phone" class="form-control" class="werknemer Title" placeholder="Telefoonnummer"
+                                    autofocus>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="date" id="user-date" class="form-control" class="werknemer Title" placeholder="Datum indiensttreding"
+                                    autofocus>
+                                </div>
+
+                                <button class="btn btn-primary" id="btn-user-form">
+                                    Save
+                                </button>
+
+                                </form>
+
+                                
+                                <form id="taken-form">
+                                    <div class="form-group">
+                                        <input type="text" id="taak-naam" class="form-control" class="werknemer Title" placeholder="taaknaam"
+                                        autofocus>
+                                    </div>
+                                
+                                    <div class="form-group">
+                                        <input type="text" id="taak-omschrijving" class="form-control" class="werknemer Title" placeholder="Etaakomschrijv ingmail"
+                                        autofocus>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="date" id="taak-datum" class="form-control" class="werknemer Title" placeholder="taakdatum"
+                                        autofocus>
+                                    </div>
+                                    <button class="btn btn-primary" id="btn-taken-form">
+                                        Save
+                                    </button>
+        
+                                </form>
+                            </div>
+                            </div>
+                        </div>
+                        <!-- Tasks List -->
+                        <div class="col-md-6" id="werknemer-container">
+
+                            
+                        </div>
+                        <div class="col-md-6" id="taken-container">
+
+                        </div>
+
+                        </div>
+                    
+                    </div>
+                                    
+                </div>
+                
+            </main>
+
+    </div>
 </div>
-	
+    
 
+  <!-- FIREBASE -->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
 
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
 
-	<!-- The core Firebase JS SDK is always required and must be listed first -->
-	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      // PUT YOUR CREDENTIALS HERE
+      apiKey: "AIzaSyDGlesNckUR_ME2jd0EKSP3BieJVxpRldw",
+            authDomain: "pwa-simac.firebaseapp.com",
+            projectId: "pwa-simac",
+            storageBucket: "pwa-simac.appspot.com",
+            messagingSenderId: "1032055915418",
+            appId: "1:1032055915418:web:b551853ddee057f6a3b023",
+            measurementId: "G-V30NRLBKSB"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
 
-	<!-- TODO: Add SDKs for Firebase products that you want to use
-		https://firebase.google.com/docs/web/setup#available-libraries -->
-	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <!-- CUSTOM CODE -->
+  <script src="main.js"></script>
 
-	<script>
-		// Your web app's Firebase configuration
-		const firebaseConfig = {
-			apiKey: "AIzaSyDGlesNckUR_ME2jd0EKSP3BieJVxpRldw",
-			authDomain: "pwa-simac.firebaseapp.com",
-			projectId: "pwa-simac",
-			storageBucket: "pwa-simac.appspot.com",
-			messagingSenderId: "1032055915418",
-			appId: "1:1032055915418:web:b551853ddee057f6a3b023",
-			measurementId: "G-V30NRLBKSB"
-		};
-		// Initialize Firebase
-		firebase.initializeApp(firebaseConfig);
-		const db = firebase.firestore();
-	</script>
-	<script src="./script.js"></script>
-	<script src="./app.js"></script>
-   
-    <script src="src/index.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
-	
-	<script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-	
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- Animatie cijfers  -->
+    <script>
+        const counters = document.querySelectorAll('.value');
+        const speed = 200;
 
-	<!-- Animatie cijfers  -->
-	<script>
-		const counters = document.querySelectorAll('.value');
-		const speed = 200;
-
-		counters.forEach( counter => {
-		const animate = () => {
-			const value = +counter.getAttribute('akhi');
-			const data = +counter.innerText;
-			
-			const time = value / speed;
-			if(data < value) {
-				counter.innerText = Math.ceil(data + time);
-				setTimeout(animate, 1000);
-				}else{
-				counter.innerText = value;
-				}
-			
-		}
-		
-		animate();
-		});
+        counters.forEach( counter => {
+        const animate = () => {
+            const value = +counter.getAttribute('akhi');
+            const data = +counter.innerText;
+            
+            const time = value / speed;
+            if(data < value) {
+                counter.innerText = Math.ceil(data + time);
+                setTimeout(animate, 1000);
+                }else{
+                counter.innerText = value;
+                }
+            
+        }
+        
+        animate();
+        });
 
   
-	</script>
+    </script>
+
 </body>
+
 </html>
-
-
-
-
-
-
