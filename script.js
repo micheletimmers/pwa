@@ -10,11 +10,14 @@ const editModalForm = document.querySelector('.edit-employee .form');
 const btnAdd = document.querySelector('.btn-add');
 
 const tableUsers = document.querySelector('.table-users');
+const tableTaken = document.querySelector('.table-taken');
 
 let id;
 
+
+
 // Create element and render users
-const renderUser = doc => {
+const renderUser = doc => { // item.data 
   const tr = `
     <tr data-id='${doc.id}'>
       <td>${doc.data().firstName}</td>
@@ -22,13 +25,17 @@ const renderUser = doc => {
       <td>${doc.data().phone}</td>
       <td>${doc.data().email}</td>
       <td>${doc.data().date}</td>
+      <td>${doc.data().taakNaam}</td>
       <td>
         <button class="btn btn-edit">Bekijk/Bewerk</button>
         <button class="btn btn-delete">Verwijder</button>
       </td>
+
+
     </tr>
   `;
   tableUsers.insertAdjacentHTML('beforeend', tr);
+
 
   // Click edit user
   const btnEdit = document.querySelector(`[data-id='${doc.id}'] .btn-edit`);
@@ -56,6 +63,7 @@ const renderUser = doc => {
   });
 
 }
+
 
 // Click add user button
 btnAdd.addEventListener('click', () => {
@@ -132,4 +140,21 @@ editModalForm.addEventListener('submit', e => {
   
 });
 
-
+var citiesRef = db.collection("users");
+citiesRef.get()
+  .then(function(querySnapshot) {
+      if (!querySnapshot.empty) {
+          var doc = querySnapshot.docs[0];
+          var restaurantsCollRef = citiesRef.doc(doc.id).collection("taken");
+          return restaurantsCollRef.get();    
+      } else {
+          throw new Error("No such document!");
+      }
+  })
+  .then(function(querySnapshot) {
+      querySnapshot.forEach(function(doc) {
+         console.log(doc.id, " => ", doc.data());
+      })
+  }).catch(function(error) {
+      console.log("Error getting document:", error);
+  });

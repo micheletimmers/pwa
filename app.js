@@ -13,6 +13,9 @@ const tableTaken = document.querySelector('.table-taken');
 
 let id;
 
+
+
+
 // Create element and render users
 const renderUser = doc => {
   const tr = `
@@ -42,7 +45,7 @@ const renderUser = doc => {
   // Click delete user
   const btnDelete2 = document.querySelector(`[data-id='${doc.id}'] .btn-delete2`);
   btnDelete2.addEventListener('click', () => {
-    db.collection('taken').doc(`${doc.id}`).delete().then(() => {
+    db.collectionGroup('taken').doc(`${doc.id}`).delete().then(() => {
       console.log('Document succesfully deleted!');
     }).catch(err => {
       console.log('Error removing document', err);
@@ -62,10 +65,10 @@ btnAdd2.addEventListener('click', () => {
 
 // User click anyware outside the modal
 window.addEventListener('click', e => {
-  if(e.target === addModal) {
+  if(e.target === addModal2) {
     addModal2.classList.remove('modal-show2');
   }
-  if(e.target === editModal) {
+  if(e.target === editModal2) {
     editModal2.classList.remove('modal-show2');
   }
 });
@@ -78,15 +81,17 @@ window.addEventListener('click', e => {
 // });
 
 // Real time listener
-db.collection('taken').onSnapshot(snapshot => {
+db.collectionGroup('taken').onSnapshot(snapshot => {
   snapshot.docChanges().forEach(change => {
     if(change.type === 'added') {
       renderUser(change.doc);
+      
     }
     if(change.type === 'removed') {
       let tr = document.querySelector(`[data-id='${change.doc.id}']`);
       let tbody = tr.parentElement;
       tableTaken.removeChild(tbody);
+      console.log(id)
     }
     if(change.type === 'modified') {
       let tr = document.querySelector(`[data-id='${change.doc.id}']`);
@@ -100,7 +105,7 @@ db.collection('taken').onSnapshot(snapshot => {
 // Click submit in add modal
 addModalForm2.addEventListener('submit', e => {
   e.preventDefault();
-  db.collection('taken').add({
+  db.collection('taken').doc(id).add({    //DIT IS AANGEPAST
     taakNaam: addModalForm2.taakNaam.value,
     omschrijvingTaak: addModalForm2.omschrijvingTaak.value,
     datumTaak: addModalForm2.datumTaak.value,
@@ -109,7 +114,7 @@ addModalForm2.addEventListener('submit', e => {
 });
 
 // Click submit in edit modal
-editModalForm2.addEventListener('submit', e => {
+editModalForm2.addEventListener('submit', e => {        //DIT IS ORIGINEEL
   e.preventDefault();
   db.collection('taken').doc(id).update({
     taakNaam: editModalForm2.taakNaam.value,
