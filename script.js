@@ -25,7 +25,6 @@ const renderUser = doc => { // item.data
       <td>${doc.data().phone}</td>
       <td>${doc.data().email}</td>
       <td>${doc.data().date}</td>
-      <td>${doc.data().taakNaam}</td>
       <td>
         <button class="btn btn-edit">Bekijk/Bewerk</button>
         <button class="btn btn-delete">Verwijder</button>
