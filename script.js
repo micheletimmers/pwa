@@ -17,7 +17,12 @@ let id;
 
 
 // Create element and render users
-const renderUser = doc => { // item.data 
+const renderUser = (doc, takenlijst) => { // item.data 
+  console.log(doc.data().firstName);
+  takenlijst.forEach((taak) => {
+    console.log(taak.data());
+  })
+
   const tr = `
     <tr data-id='${doc.id}'>
       <td>${doc.data().firstName}</td>
@@ -93,23 +98,31 @@ window.addEventListener('click', e => {
 // });
 
 // Real time listener
+
+
 db.collection('users').onSnapshot(snapshot => {
   snapshot.docChanges().forEach(change => {
-    if(change.type === 'added') {
-      renderUser(change.doc);
-    }
-    if(change.type === 'removed') {
-      let tr = document.querySelector(`[data-id='${change.doc.id}']`);
-      let tbody = tr.parentElement;
-      tableUsers.removeChild(tbody);
-    }
-    if(change.type === 'modified') {
-      let tr = document.querySelector(`[data-id='${change.doc.id}']`);
-      let tbody = tr.parentElement;
-      tableUsers.removeChild(tbody);
-      renderUser(change.doc);
-    }
-  })
+  
+    change.doc.ref.collection('taken').get()
+    .then((snapshotTaken) => {
+      if(change.type === 'added') {
+        renderUser(change.doc, snapshotTaken);
+      }
+      if(change.type === 'removed') {
+        let tr = document.querySelector(`[data-id='${change.doc.id}']`);
+        let tbody = tr.parentElement;
+        tableUsers.removeChild(tbody);
+      }
+      if(change.type === 'modified') {
+        let tr = document.querySelector(`[data-id='${change.doc.id}']`);
+        let tbody = tr.parentElement;
+        tableUsers.removeChild(tbody);
+        renderUser(change.doc, snapshotTaken);
+      }
+    })
+    })
+
+    
 })
 
 // Click submit in add modal
@@ -139,21 +152,21 @@ editModalForm.addEventListener('submit', e => {
   
 });
 
-var citiesRef = db.collection("users");
-citiesRef.get()
-  .then(function(querySnapshot) {
-      if (!querySnapshot.empty) {
-          var doc = querySnapshot.docs[0];
-          var restaurantsCollRef = citiesRef.doc(doc.id).collection("taken");
-          return restaurantsCollRef.get();    
-      } else {
-          throw new Error("No such document!");
-      }
-  })
-  .then(function(querySnapshot) {
-      querySnapshot.forEach(function(doc) {
-         console.log(doc.id, " => ", doc.data());
-      })
-  }).catch(function(error) {
-      console.log("Error getting document:", error);
-  });
+// var citiesRef = db.collection("users");
+// citiesRef.get()
+//   .then(function(querySnapshot) {
+//       if (!querySnapshot.empty) {
+//           var doc = querySnapshot.docs[0];
+//           var restaurantsCollRef = citiesRef.doc(doc.id).collection("taken");
+//           return restaurantsCollRef.get();    
+//       } else {
+//           throw new Error("No such document!");
+//       }
+//   })
+//   .then(function(querySnapshot) {
+//       querySnapshot.forEach(function(doc) {
+//          console.log(doc.id, " => ", doc.data());
+//       })
+//   }).catch(function(error) {
+//       console.log("Error getting document:", error);
+//   });
