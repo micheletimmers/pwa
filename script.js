@@ -17,10 +17,27 @@ let id;
 
 
 // Create element and render users
-const renderUser = (doc, takenlijst) => { // item.data 
-  console.log(doc.data().firstName);
+const renderUser = (doc, takenlijst) => {         // item.data 
+  console.log(doc.data().firstName);              ///werknemer wordt opgeroepen
   takenlijst.forEach((taak) => {
-    console.log(taak.data());
+    
+  const p = `
+  <p data-id='${takenlijst.id}'>
+    <p>${taak.data().taakNaam}</p>
+    <p>${taak.data().taakOmschrijving}</p>
+    
+    <p>
+      <button class="btn btn-edit">Bekijk/Bewerk</button>
+      <button class="btn btn-delete">Verwijder</button>
+    </h1>
+
+
+  </p>
+`;
+tableUsers.insertAdjacentHTML('beforeend', p);
+
+    
+    console.log(taak.data());                     //taak wordt opgeroepen 
   })
 
   const tr = `
@@ -152,12 +169,12 @@ editModalForm.addEventListener('submit', e => {
   
 });
 
-// var citiesRef = db.collection("users");
-// citiesRef.get()
+// var usersRef = db.collection("users");
+// usersRef.get()
 //   .then(function(querySnapshot) {
 //       if (!querySnapshot.empty) {
 //           var doc = querySnapshot.docs[0];
-//           var restaurantsCollRef = citiesRef.doc(doc.id).collection("taken");
+//           var takenCollRef = usersRef.doc(doc.id).collection("taken");
 //           return restaurantsCollRef.get();    
 //       } else {
 //           throw new Error("No such document!");
