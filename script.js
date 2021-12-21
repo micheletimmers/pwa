@@ -19,9 +19,8 @@ let id;
 // Create element and render users
 const renderUser = (doc, takenlijst) => {         // item.data 
   console.log(doc.data().firstName);              ///werknemer wordt opgeroepen
-  takenlijst.forEach((taak) => {
-  
-    const tr = `
+
+  const tr = `
     <tr data-id='${doc.id}'>
       <td>${doc.data().firstName}</td>
       <td>${doc.data().lastName}</td>
@@ -37,6 +36,10 @@ const renderUser = (doc, takenlijst) => {         // item.data
     </tr>
   `;
   tableUsers.insertAdjacentHTML('beforeend', tr);
+  
+  takenlijst.forEach((taak) => {
+  
+    
 
 
   const p = `
