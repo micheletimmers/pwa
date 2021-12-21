@@ -20,27 +20,8 @@ let id;
 const renderUser = (doc, takenlijst) => {         // item.data 
   console.log(doc.data().firstName);              ///werknemer wordt opgeroepen
   takenlijst.forEach((taak) => {
-    
-  const p = `
-  <p data-id='${takenlijst.id}'>
-    <p>${taak.data().taakNaam}</p>
-    <p>${taak.data().taakOmschrijving}</p>
-    
-    <p>
-      <button class="btn btn-edit">Bekijk/Bewerk</button>
-      <button class="btn btn-delete">Verwijder</button>
-    </h1>
-
-
-  </p>
-`;
-tableUsers.insertAdjacentHTML('beforeend', p);
-
-    
-    console.log(taak.data());                     //taak wordt opgeroepen 
-  })
-
-  const tr = `
+  
+    const tr = `
     <tr data-id='${doc.id}'>
       <td>${doc.data().firstName}</td>
       <td>${doc.data().lastName}</td>
@@ -56,6 +37,28 @@ tableUsers.insertAdjacentHTML('beforeend', p);
     </tr>
   `;
   tableUsers.insertAdjacentHTML('beforeend', tr);
+
+
+  const p = `
+  <p data-id='${taak.id}'>
+    <p>${taak.data().taakNaam}</p>
+    <p>${taak.data().taakOmschrijving}</p>
+    
+    <p>
+      <button class="btn btn-edit">Bekijk/Bewerk</button>
+      <button class="btn btn-delete">Verwijder</button>
+    </h1>
+
+
+  </p>
+`;
+tableTaken.insertAdjacentHTML('beforeend', p);
+
+    
+    console.log(taak.data());                     //taak wordt opgeroepen 
+  })
+
+  
 
 
   // Click edit user
