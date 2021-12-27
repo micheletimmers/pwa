@@ -16,7 +16,7 @@ let id;
 
 
 
-// Create element and render users
+// Element creeeren en users renderen 
 const renderUser = (doc, takenlijst) => {         // item.data 
   console.log(doc.data().firstName);              ///werknemer wordt opgeroepen
 
@@ -43,17 +43,18 @@ const renderUser = (doc, takenlijst) => {         // item.data
 
 
   const p = `
-  <p data-id='${taak.id}'>
-    <p>${taak.data().taakNaam}</p>
-    <p>${taak.data().taakOmschrijving}</p>
+  <tr data-id='${taak.id}'>
+  <td>Taak</td>
+    <td>${taak.data().taakNaam}</td>
+    <td>${taak.data().taakOmschrijving}</td>
     
-    <p>
-      <button class="btn btn-edit">Bekijk/Bewerk</button>
-      <button class="btn btn-delete">Verwijder</button>
-    </h1>
+    <td>
+      <button class="btn btn-edit2">Bekijk/Bewerk</button>
+      <button class="btn btn-delete2">Verwijder</button>
+    </td>
 
 
-  </p>
+  </tr>
 `;
 tableTaken.insertAdjacentHTML('beforeend', p);
 
@@ -64,7 +65,7 @@ tableTaken.insertAdjacentHTML('beforeend', p);
   
 
 
-  // Click edit user
+  // Button Click edit user
   const btnEdit = document.querySelector(`[data-id='${doc.id}'] .btn-edit`);
   btnEdit.addEventListener('click', () => {
     editModal.classList.add('modal-show3');
@@ -77,6 +78,7 @@ tableTaken.insertAdjacentHTML('beforeend', p);
     editModalForm.date.value = doc.data().date;
 
   });
+
 
   // Click delete user
   
@@ -113,7 +115,7 @@ window.addEventListener('click', e => {
   }
 });
 
-// Get all users
+// Alle gebruikers ophalen / Get all users
 // db.collection('users').get().then(querySnapshot => {
 //   querySnapshot.forEach(doc => {
 //     renderUser(doc);
