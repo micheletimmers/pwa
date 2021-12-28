@@ -13,7 +13,7 @@
 		<link rel="shortcut icon" type="image/jpg" href="images/simac-klein.png"/>
 
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 		<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 		<link href="assets/css/dashboard.css" rel="stylesheet">
 		
@@ -87,7 +87,7 @@
 						</a>
 						</li>
 						<li class="nav-item">
-						<a class="nav-link" href="documenten.html">
+						<a class="nav-link" href="#">
 							<span data-feather="bar-chart-2"></span>
 							Documenten
 						</a>
@@ -107,56 +107,13 @@
 					</ul>
 				</div>
 				<div class="d-grid col-6 mx-auto">
-					<a class="btn btn-primary" id="button-nieuwe-werknemer" href="nieuwewerknemer.html" role="button">Nieuwe werknemer</a>
+					<button type="button" id="button-nieuwe-werknemer" class="btn" disabled>Nieuwe werknemer</button>
 				</div>
 				
 			</nav>
 			
 			<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-				<!-- <div class="col-12 col-md-8">
-					<div class="card radius-10">
-						<div class="card-body">
-
-						<header>
-							<h3>Voeg nieuwe werknemer toe</h3>
-						</header> -->
-						<!-- Add Werknemer -->
-						<!-- <div class="col-12 col-md-12 col-lg-12 add-employee">
-							<div class="employee">
-								
-								<form class="form row g-3" autocomplete="off">
-									<div class="col-md-6">
-										<label for="inputEmail4" class="form-label">Voornaam</label>
-										<input type="text" class="form-control" name="firstName" placeholder="Voornaam">
-									</div>
-									<div class="col-md-6">
-										<label for="inputPassword4" class="form-label">Achternaam</label>
-										<input type="text" class="form-control" name="lastName" placeholder="Achternaam">
-									</div>
-									<div class="col-12">
-										<label for="inputAddress" class="form-label">Telefoonnummer</label>
-										<input type="number" class="form-control" name="phone" placeholder="Telefoonnummer">
-									</div>
-									<div class="col-12">
-										<label for="inputAddress2" class="form-label">E-mail</label>
-										<input type="email" class="form-control" name="email" placeholder="Email">
-									</div>
-									<div class="col-md-6">
-										<label for="inputCity" class="form-label">Datum</label>
-										<input type="date" class="form-control" name="date" placeholder="Datum">
-									</div>
-									<div class="col-12">
-										<button class="btn btn-employee btn-outline-secondary">Opslaan</button>
-									</div>	
-								</form>
-							</div>
-						</div>
-						</div>
-					</div>
-				</div> -->
 				
-				<!-- 
-
 				
 					  
 				<!-- MAIN -->
@@ -164,72 +121,98 @@
 					<div class="col-12 col-md-12 col-lg-12"> 
 						<div class="row clearfix">
 							<div class="container">
+								<div class="card radius-10">
+								<div class="card-body">
+
 								
-							
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-12 col-md-8">
-					<div class="card radius-10">
-						<div class="card-body">
-							<header>
-								<h4>Lijst met bestaande werknemers</h4>
-							</header>
-							<div class="table-wrapper">
-								<table class="table-users table-taken col-12 col-md-12 col-lg-12">
-									<tr>
-									<th>Voornaam</th>										
-									<th>Achternaam</th>
-									<th>Telefoonnummer</th>
-									<th>Email</th>
-									<th>Datum</th>
-									<th>Bewerken/verwijderen</th>
-									</tr>
-								</table>	
-							</div>
-				
-					
-							<!-- Edit Modal -->
-							<div class="container">
-								<!-- Edit Modal -->
-								<div class="edit-employee modal-wrapper3">
+								<!-- Add Werknemer -->
+								<div class="col-12 col-md-12 col-lg-12 add-employee">
 									<div class="employee">
-										<div class="modal-header3"><h3>Bewerk Werknemer</h3></div>
-										<div class="modal-body3">
-											<form class="form" autocomplete="off">
-												<input type="text" name="firstName" placeholder="Voornaam">
-												<input type="text" name="lastName" placeholder="Achternaam">
-												<input type="number" name="phone" placeholder="Telefoonnummer">
-												<input type="email" name="email" placeholder="Email">
-												<input type="date" name="date" placeholder="Datum">
-												<!-- Deze moet hier blijven staan anders gaat het kapot -->
-												<button class="btn btn-add btn-outline-secondary px-5">Bewerken</button>
+										<header>
+                                            <h3>Voeg nieuwe werknemer toe</h3>
+                                        </header>
+										<form class="form row g-3" autocomplete="off">
+											<div class="col-md-6">
+												<label for="inputEmail4" class="form-label">Voornaam</label>
+												<input type="text" class="form-control" name="firstName" placeholder="Voornaam">
+											</div>
+											<div class="col-md-6">
+												<label for="inputPassword4" class="form-label">Achternaam</label>
+												<input type="text" class="form-control" name="lastName" placeholder="Achternaam">
+											</div>
+											<div class="col-12">
+												<label for="inputAddress" class="form-label">Telefoonnummer</label>
+												<input type="number" class="form-control" name="phone" placeholder="Telefoonnummer">
+											</div>
+											<div class="col-12">
+												<label for="inputAddress2" class="form-label">E-mail</label>
+												<input type="email" class="form-control" name="email" placeholder="Email">
+											</div>
+											<div class="col-md-6">
+												<label for="inputCity" class="form-label">Datum</label>
+												<input type="date" class="form-control" name="date" placeholder="Datum">
+                                                
+											</div>
+                                            <div class="col-md-12">
+                                                <label for="inputEmail4" class="form-label">Moet het systeem een automatische takenlijst aanmaken?</label>
+												<div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                    <label class="form-check-label" for="flexRadioDefault2">
+                                                        Automatische takenlijst
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                        Geen automatische takenlijst
+                                                    </label>
+                                                </div>
+											</div>
+											<div class="col-12">
+												<button class="btn btn-employee btn-outline-secondary">Opslaan</button>
 												
-											</form>
-										</div>
+											</div>
+											
+										</form>
 									</div>
-								</div>	
+								</div>
+								<!-- End Werknemer -->
+								</div>
+								</div>
 							</div>
 						</div>
 					</div>
-
 				</div>
-				<!-- rechts -->
-				<div class="col-6 col-md-4"> 
-					<div class="card radius-10">
-						<div class="card-body">						
-								  
-						</div>
-					</div>
-				</div>	
+				
+							
+							
+                <!-- Edit Modal -->
+                <div class="container">
+                    <!-- Edit Modal -->
+                    <div class="edit-employee modal-wrapper3">
+                    <div class="employee">
+                        <div class="modal-header3"><h3>Bewerk Werknemer</h3></div>
+                        <div class="modal-body3">
+                        <form class="form" autocomplete="off">
+                            <input type="text" name="firstName" placeholder="Voornaam">
+                            <input type="text" name="lastName" placeholder="Achternaam">
+                            <input type="number" name="phone" placeholder="Telefoonnummer">
+                            <input type="email" name="email" placeholder="Email">
+                            <input type="date" name="date" placeholder="Datum">
+                            <!-- Deze moet hier blijven staan anders gaat het kapot -->
+                            <button type="button" class="btn btn-add btn-outline-secondary px-5">Voeg werknemer toe</button>
+                        </form>
+                        
+                        </div>
+                    </div>
+                    </div>	
 
-			
+                </div>
+                    <!-- End Modal -->		
 			</main>
 		</div>
 	</div>
-	<footer class="footer mt-auto py-3 bg-light">
+	<footer class="footer mt-auto py-3 bg-light fixed-bottom">
 		<div class="container">
 		<span class="text-muted">Simac Assistant Onboarding</span>
 		</div>
@@ -268,9 +251,9 @@
 		<script src="https://unpkg.com/feather-icons"></script>
 
 		<script src="src/index.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="dashboard.js"></script>
 
+		<script src="assets/js/sidebars.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 	</body>
 </html>
