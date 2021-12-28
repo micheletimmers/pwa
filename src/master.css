@@ -1,3 +1,22 @@
 body {
-    background: #eeeeee;
+  background: #eeeeee;
+}
+
+#header-nav {
+}
+
+#sidebarMenu {
+}
+
+#button-nieuwe-werknemer {
+  background-color: #c40028;
+  border-radius: 25px;
+  color: white;
+  font-size: small;
+  margin-top: 50%;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+#card-image-documenten {
+  width: 40px;
 }
