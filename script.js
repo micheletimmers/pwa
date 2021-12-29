@@ -21,6 +21,7 @@ const renderUser = (doc, takenlijst) => {         // item.data
   console.log(doc.data().firstName);              ///werknemer wordt opgeroepen
 
   const tr = `
+  
     <tr data-id='${doc.id}'>
       <td>${doc.data().firstName}</td>
       <td>${doc.data().lastName}</td>
@@ -28,6 +29,7 @@ const renderUser = (doc, takenlijst) => {         // item.data
       <td>${doc.data().email}</td>
       <td>${doc.data().date}</td>
       <td>
+      
         <button class="btn btn-edit">Bekijk/Bewerk</button>
         <button class="btn btn-delete">Verwijder</button>
       </td>
@@ -43,14 +45,25 @@ const renderUser = (doc, takenlijst) => {         // item.data
 
 
   const p = `
+  <tr>
+    <th id="th-style">Taak</th>										
+    <th id="th-style">Taakomschrijving</th>
+	
+    <th id="th-style">Datum</th>
+    <th id="th-style">Taak klaar?</th>
+  </tr>
+    
   <tr data-id='${taak.id}'>
-  <td>Taak</td>
+  
     <td>${taak.data().taakNaam}</td>
     <td>${taak.data().taakOmschrijving}</td>
+    <td>${taak.data().date}</td>
+    <td>${taak.data().taakDone}</td>
     
     <td>
       <button class="btn btn-edit2">Bekijk/Bewerk</button>
       <button class="btn btn-delete2">Verwijder</button>
+      <input class="form-check-input btn-delete" type="checkbox" value="" id="flexCheckDefault">
     </td>
 
 
@@ -174,6 +187,7 @@ editModalForm.addEventListener('submit', e => {
     date: editModalForm.date.value,
   });
   editModal.classList.remove('modal-show3');
+  location.reload();
   
 });
 
@@ -195,3 +209,4 @@ editModalForm.addEventListener('submit', e => {
 //   }).catch(function(error) {
 //       console.log("Error getting document:", error);
 //   });
+
