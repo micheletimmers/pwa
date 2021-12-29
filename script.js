@@ -21,12 +21,18 @@ const renderUser = (doc, takenlijst) => {         // item.data
   console.log(doc.data().firstName);              ///werknemer wordt opgeroepen
 
   const tr = `
+  
     <tr data-id='${doc.id}'>
       <td>${doc.data().firstName}</td>
       <td>${doc.data().lastName}</td>
       <td>${doc.data().date}</td>
       <td>
+<<<<<<< HEAD
         <button class="btn btn-edit">Bewerk</button>
+=======
+      
+        <button class="btn btn-edit">Bekijk/Bewerk</button>
+>>>>>>> 060182784b424da5290f7c9c7cd5d5729491043c
         <button class="btn btn-delete">Verwijder</button>
       </td>
     </tr>
@@ -35,15 +41,31 @@ const renderUser = (doc, takenlijst) => {         // item.data
   
   takenlijst.forEach((taak) => {
   const p = `
+  <tr>
+    <th id="th-style">Taak</th>										
+    <th id="th-style">Taakomschrijving</th>
+	
+    <th id="th-style">Datum</th>
+    <th id="th-style">Taak klaar?</th>
+  </tr>
+    
   <tr data-id='${taak.id}'>
+<<<<<<< HEAD
     <th style="font-weight: bold;">Taak</th>
     <td>${taak.data().taakNaam}
     <td style="font-weight: bold;">Omschrijving</td>
+=======
+  
+    <td>${taak.data().taakNaam}</td>
+>>>>>>> 060182784b424da5290f7c9c7cd5d5729491043c
     <td>${taak.data().taakOmschrijving}</td>
+    <td>${taak.data().date}</td>
+    <td>${taak.data().taakDone}</td>
     
     <td>
       <button class="btn btn-edit2">Bewerk</button>
       <button class="btn btn-delete2">Verwijder</button>
+      <input class="form-check-input btn-delete" type="checkbox" value="" id="flexCheckDefault">
     </td>
 
 
@@ -167,6 +189,7 @@ editModalForm.addEventListener('submit', e => {
     date: editModalForm.date.value,
   });
   editModal.classList.remove('modal-show3');
+  location.reload();
   
 });
 
@@ -188,3 +211,4 @@ editModalForm.addEventListener('submit', e => {
 //   }).catch(function(error) {
 //       console.log("Error getting document:", error);
 //   });
+
