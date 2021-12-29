@@ -21,6 +21,7 @@ const renderUser = (doc, takenlijst) => {         // item.data
   console.log(doc.data().firstName);              ///werknemer wordt opgeroepen
 
   const tr = `
+  
     <tr data-id='${doc.id}'>
       <td>${doc.data().firstName}</td>
       <td>${doc.data().lastName}</td>
@@ -43,8 +44,13 @@ const renderUser = (doc, takenlijst) => {         // item.data
 
 
   const p = `
+  <tr>
+    <th id="th-style">Voornaam</th>										
+    <th id="th-style">Achternaam</th>	
+  </tr>
+    
   <tr data-id='${taak.id}'>
-  <td>Taak</td>
+  
     <td>${taak.data().taakNaam}</td>
     <td>${taak.data().taakOmschrijving}</td>
     
@@ -195,3 +201,4 @@ editModalForm.addEventListener('submit', e => {
 //   }).catch(function(error) {
 //       console.log("Error getting document:", error);
 //   });
+
