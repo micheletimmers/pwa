@@ -24,39 +24,32 @@ const renderUser = (doc, takenlijst) => {         // item.data
     <tr data-id='${doc.id}'>
       <td>${doc.data().firstName}</td>
       <td>${doc.data().lastName}</td>
-      <td>${doc.data().phone}</td>
-      <td>${doc.data().email}</td>
       <td>${doc.data().date}</td>
       <td>
-        <button class="btn btn-edit">Bekijk/Bewerk</button>
+        <button class="btn btn-edit">Bewerk</button>
         <button class="btn btn-delete">Verwijder</button>
       </td>
-
-
     </tr>
   `;
   tableUsers.insertAdjacentHTML('beforeend', tr);
   
   takenlijst.forEach((taak) => {
-  
-    
-
-
   const p = `
   <tr data-id='${taak.id}'>
-  <td>Taak</td>
-    <td>${taak.data().taakNaam}</td>
+    <th style="font-weight: bold;">Taak</th>
+    <td>${taak.data().taakNaam}
+    <td style="font-weight: bold;">Omschrijving</td>
     <td>${taak.data().taakOmschrijving}</td>
     
     <td>
-      <button class="btn btn-edit2">Bekijk/Bewerk</button>
+      <button class="btn btn-edit2">Bewerk</button>
       <button class="btn btn-delete2">Verwijder</button>
     </td>
 
 
   </tr>
-`;
-tableTaken.insertAdjacentHTML('beforeend', p);
+    `;
+    tableTaken.insertAdjacentHTML('beforeend', p);
 
     
     console.log(taak.data());                     //taak wordt opgeroepen 
