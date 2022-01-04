@@ -26,13 +26,8 @@ const renderUser = (doc, takenlijst) => {         // item.data
       <td>${doc.data().firstName}</td>
       <td>${doc.data().lastName}</td>
       <td>${doc.data().date}</td>
-      <td>
-<<<<<<< HEAD
+      <td>      
         <button class="btn btn-edit">Bewerk</button>
-=======
-      
-        <button class="btn btn-edit">Bekijk/Bewerk</button>
->>>>>>> 060182784b424da5290f7c9c7cd5d5729491043c
         <button class="btn btn-delete">Verwijder</button>
       </td>
     </tr>
@@ -41,35 +36,26 @@ const renderUser = (doc, takenlijst) => {         // item.data
   
   takenlijst.forEach((taak) => {
   const p = `
-  <tr>
-    <th id="th-style">Taak</th>										
-    <th id="th-style">Taakomschrijving</th>
-	
-    <th id="th-style">Datum</th>
-    <th id="th-style">Taak klaar?</th>
-  </tr>
+  <div class="col-12 col-md-8" >
     
   <tr data-id='${taak.id}'>
-<<<<<<< HEAD
-    <th style="font-weight: bold;">Taak</th>
-    <td>${taak.data().taakNaam}
-    <td style="font-weight: bold;">Omschrijving</td>
-=======
-  
+  <th style="font-weight: bold">Taak</th>	
     <td>${taak.data().taakNaam}</td>
->>>>>>> 060182784b424da5290f7c9c7cd5d5729491043c
+  <th style="font-weight: bold">Omschrijving</th>
     <td>${taak.data().taakOmschrijving}</td>
+  <th style="font-weight: bold">Deadline</th>
     <td>${taak.data().date}</td>
-    <td>${taak.data().taakDone}</td>
+    
     
     <td>
       <button class="btn btn-edit2">Bewerk</button>
       <button class="btn btn-delete2">Verwijder</button>
-      <input class="form-check-input btn-delete" type="checkbox" value="" id="flexCheckDefault">
+      <input class="form-check-input btn-delete2" type="checkbox" value="" id="flexCheckDefault">
     </td>
 
 
   </tr>
+  </div>
     `;
     tableTaken.insertAdjacentHTML('beforeend', p);
 
@@ -100,6 +86,17 @@ const renderUser = (doc, takenlijst) => {         // item.data
   const btnDelete = document.querySelector(`[data-id='${doc.id}'] .btn-delete`);
   btnDelete.addEventListener('click', () => {
     db.collection('users').doc(`${doc.id}`).delete().then(() => {
+      console.log('Document succesfully deleted!');
+    }).catch(err => {
+      console.log('Error removing document', err);
+    });
+  });
+
+  // Click delete user 2
+  
+  const btnDelete2 = document.querySelector(`[data-id='${doc.id}'] .btn-delete2`);
+  btnDelete2.addEventListener('click', () => {
+    db.doc.collection('taken').doc(`${doc.id}`).delete().then(() => {
       console.log('Document succesfully deleted!');
     }).catch(err => {
       console.log('Error removing document', err);
