@@ -155,3 +155,10 @@ body {
   font-size: 32px !important;
   line-height: 1em !important;
 }
+
+@media screen and (max-width: 767px) {
+  #simac-logo {
+    max-width: 90%;
+    display: none;
+  }
+}

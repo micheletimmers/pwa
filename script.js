@@ -25,39 +25,49 @@ const renderUser = (doc, takenlijst) => {         // item.data
     <tr data-id='${doc.id}'>
       <td>${doc.data().firstName}</td>
       <td>${doc.data().lastName}</td>
+      <td>${doc.data().phone}</td>
+      <td>${doc.data().email}</td>
       <td>${doc.data().date}</td>
-      <td>      
-        <button class="btn btn-edit">Bewerk</button>
+      <td>
+        <button class="btn btn-edit">Bekijk/Bewerk</button>
+      </td>
+      <td>
         <button class="btn btn-delete">Verwijder</button>
       </td>
-    </tr>
+
+
+  </tr>
+ <tr>
+    <th id="th-style">Taak</th>										
+    <th id="th-style">Omschrijving</th>	
+  </tr>
   `;
   tableUsers.insertAdjacentHTML('beforeend', tr);
-  
+ 
   takenlijst.forEach((taak) => {
+  
+    
+
+
   const p = `
-  <div class="col-12 col-md-8" >
+  
     
   <tr data-id='${taak.id}'>
-  <th style="font-weight: bold">Taak</th>	
+  
     <td>${taak.data().taakNaam}</td>
-  <th style="font-weight: bold">Omschrijving</th>
     <td>${taak.data().taakOmschrijving}</td>
-  <th style="font-weight: bold">Deadline</th>
-    <td>${taak.data().date}</td>
-    
     
     <td>
-      <button class="btn btn-edit2">Bewerk</button>
+      <button class="btn btn-edit2">Bekijk/Bewerk</button>
+    </td>
+    <td>
       <button class="btn btn-delete2">Verwijder</button>
-      <input class="form-check-input btn-delete2" type="checkbox" value="" id="flexCheckDefault">
     </td>
 
 
   </tr>
-  </div>
-    `;
-    tableTaken.insertAdjacentHTML('beforeend', p);
+`;
+tableTaken.insertAdjacentHTML('beforeend', p);
 
     
     console.log(taak.data());                     //taak wordt opgeroepen 
@@ -86,17 +96,6 @@ const renderUser = (doc, takenlijst) => {         // item.data
   const btnDelete = document.querySelector(`[data-id='${doc.id}'] .btn-delete`);
   btnDelete.addEventListener('click', () => {
     db.collection('users').doc(`${doc.id}`).delete().then(() => {
-      console.log('Document succesfully deleted!');
-    }).catch(err => {
-      console.log('Error removing document', err);
-    });
-  });
-
-  // Click delete user 2
-  
-  const btnDelete2 = document.querySelector(`[data-id='${doc.id}'] .btn-delete2`);
-  btnDelete2.addEventListener('click', () => {
-    db.doc.collection('taken').doc(`${doc.id}`).delete().then(() => {
       console.log('Document succesfully deleted!');
     }).catch(err => {
       console.log('Error removing document', err);
@@ -186,7 +185,6 @@ editModalForm.addEventListener('submit', e => {
     date: editModalForm.date.value,
   });
   editModal.classList.remove('modal-show3');
-  location.reload();
   
 });
 
