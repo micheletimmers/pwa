@@ -8,6 +8,7 @@ const editModal = document.querySelector('.edit-employee');
 const editModalForm = document.querySelector('.edit-employee .form');
 
 const btnAdd = document.querySelector('.btn-add');
+const btnEdit = document.querySelector('.btn-edit');
 
 const tableUsers = document.querySelector('.table-users');
 const tableTaken = document.querySelector('.table-taken');
@@ -29,7 +30,7 @@ const renderUser = (doc, takenlijst) => {         // item.data
       <td>${doc.data().email}</td>
       <td>${doc.data().date}</td>
       <td>
-        <button class="btn btn-edit">Bekijk/Bewerk</button>
+      <i class="bi-pencil-square"><button class="btn btn-edit">Bekijk/Bewerk</button>
       </td>
       <td>
         <button class="btn btn-delete">Verwijder</button>
@@ -58,7 +59,7 @@ const renderUser = (doc, takenlijst) => {         // item.data
     <td>${taak.data().taakOmschrijving}</td>
     
     <td>
-      <button class="btn btn-edit2">Bekijk/Bewerk</button>
+    <i class="bi-pencil-square"><button class="btn btn-edit2">Bewerk</button>
     </td>
     <td>
       <button class="btn btn-delete2">Verwijder</button>

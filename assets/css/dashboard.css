@@ -31,6 +31,7 @@ body {
 @media (max-width: 767.98px) {
   .sidebar {
     top: 5rem;
+    background-color: white;
   }
 }
 
@@ -159,6 +160,19 @@ body {
 @media screen and (max-width: 767px) {
   #simac-logo {
     max-width: 90%;
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .button-klein {
+    max-width: 90%;
+    display: none;
+  }
+}
+@media screen and (min-width: 767px) {
+  .button-groot {
+    max-width: 10%;
     display: none;
   }
 }
