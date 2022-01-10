@@ -61,7 +61,7 @@ const renderUser = (doc, takenlijst) => {         // item.data
 tableTaken.insertAdjacentHTML('beforeend', p);
 
     
-    console.log(taak.data());                     //taak wordt opgeroepen 
+    // console.log(taak.data());                     //taak wordt opgeroepen 
   })
 
   
