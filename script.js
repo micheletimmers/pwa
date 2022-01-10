@@ -35,8 +35,6 @@ const renderUser = (doc, takenlijst) => {         // item.data
       <td>
         <button class="btn btn-delete">Verwijder</button>
       </td>
-
-
   </tr>
  <tr>
     <th id="th-style">Taak</th>										
@@ -46,26 +44,18 @@ const renderUser = (doc, takenlijst) => {         // item.data
   tableUsers.insertAdjacentHTML('beforeend', tr);
  
   takenlijst.forEach((taak) => {
-  
-    
-
 
   const p = `
-  
-    
+
   <tr data-id='${taak.id}'>
-  
     <td>${taak.data().taakNaam}</td>
     <td>${taak.data().taakOmschrijving}</td>
-    
     <td>
     <i class="bi-pencil-square"><button class="btn btn-edit2">Bewerk</button>
     </td>
     <td>
       <button class="btn btn-delete2">Verwijder</button>
     </td>
-
-
   </tr>
 `;
 tableTaken.insertAdjacentHTML('beforeend', p);
@@ -77,7 +67,7 @@ tableTaken.insertAdjacentHTML('beforeend', p);
   
 
 
-  // Button Click edit user
+  // Button gebruiker bewerken
   const btnEdit = document.querySelector(`[data-id='${doc.id}'] .btn-edit`);
   btnEdit.addEventListener('click', () => {
     editModal.classList.add('modal-show3');
@@ -92,7 +82,7 @@ tableTaken.insertAdjacentHTML('beforeend', p);
   });
 
 
-  // Click delete user
+  // Button verwijderen
   
   const btnDelete = document.querySelector(`[data-id='${doc.id}'] .btn-delete`);
   btnDelete.addEventListener('click', () => {
@@ -162,7 +152,7 @@ db.collection('users').onSnapshot(snapshot => {
     
 })
 
-// Click submit in add modal
+// Opslaan button bij toevoegen nieuwe werknemer
 addModalForm.addEventListener('submit', e => {
   e.preventDefault();
   db.collection('users').add({
@@ -175,7 +165,7 @@ addModalForm.addEventListener('submit', e => {
   modalWrapper.classList.remove('modal-show3');
 });
 
-// Click submit in edit modal
+// Opslaan button bij bewerken
 editModalForm.addEventListener('submit', e => {
   e.preventDefault();
   db.collection('users').doc(id).update({

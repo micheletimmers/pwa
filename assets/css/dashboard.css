@@ -176,3 +176,7 @@ body {
     display: none;
   }
 }
+td,
+th {
+  vertical-align: middle;
+}
