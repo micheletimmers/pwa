@@ -5,20 +5,20 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="theme-color" content="#009578">
-	<title>Michèle Timmers PWA</title>
+	<title>Simac Assistant Onboarding</title>
 
-	<link href="assets/css/app.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/app.css">
 	<link rel="stylesheet" href="src/master.css">
 	<link rel="manifest" href="manifest.json">
-	<link rel="apple-touch-icon" href="images/logo192.png">
+	<link rel="apple-touch-icon" href="images/simac-logo-192.png">
 	<link rel="shortcut icon" type="image/jpg" href="images/simac-klein.png" />
 
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="assets/css/dashboard.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+	
 
 </head>
 
@@ -30,12 +30,11 @@
 		<button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
 		  <span class="navbar-toggler-icon"></span>
 		</button>
-		
-	  </header>
+	</header>
 
-	  <div class="container-fluid">
+	<div class="container-fluid">
 		<div class="row">
-		  <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse">
+		  	<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse">
 			<img class="col-md-5 col-lg-6 d-md-block" src="/images/simac-logo-rgb.jpeg" alt="Simac logo" id="simac-logo">
 			<div class="position-sticky pt-3">
 			  <ul class="nav flex-column">
@@ -75,164 +74,96 @@
 			  
 			</div>
 		  </nav>
+		</div>
+	</div>
 	  
 
-	<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-	  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-		<div class="col-md-4">
-		  <h1 class="h2">Dashboard</h1>
-		</div>
-		<div class="col-md-4">
-		</div>
-		<div class="col-md-4">
-		  <button class="simac-button"><i class="bi-file-fill"></i> Leidinggevende 1 </button> 
-		</div>
-		
-		
-
-	  </div>
-
-
-	  <div class="container-fluid">
-		  <div class="row">
-			
+	<main class="col-md-8 ms-sm-auto col-lg-10 px-md-4">
+	  	<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
 			<div class="col-md-4">
-			 
-			  <a href="nieuwewerknemer.html" ><button class="btn-block simac-button" style="width: 18rem;"><i class="bi-plus"></i> Werknemer toevoegen </button></a> 
+			<h1 class="h2">Dashboard</h1>
 			</div>
-			<div class="col-md-8">
-			  
-			  <input class="btn-block simac-button form-control form-control-dark w-100" style="width: 30rem;"type="text" placeholder="Search" aria-label="Search">
-			  
+			<div class="col-md-4">
 			</div>
-			
-			<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-				<!-- <div class="col-12 col-md-8">
-					<div class="card radius-10">
-						<div class="card-body">
-
-						<header>
-							<h3>Voeg nieuwe werknemer toe</h3>
-						</header> -->
-				<!-- Add Werknemer -->
-				<!-- <div class="col-12 col-md-12 col-lg-12 add-employee">
-							<div class="employee">
-								
-								<form class="form row g-3" autocomplete="off">
-									<div class="col-md-6">
-										<label for="inputEmail4" class="form-label">Voornaam</label>
-										<input type="text" class="form-control" name="firstName" placeholder="Voornaam">
-									</div>
-									<div class="col-md-6">
-										<label for="inputPassword4" class="form-label">Achternaam</label>
-										<input type="text" class="form-control" name="lastName" placeholder="Achternaam">
-									</div>
-									<div class="col-12">
-										<label for="inputAddress" class="form-label">Telefoonnummer</label>
-										<input type="number" class="form-control" name="phone" placeholder="Telefoonnummer">
-									</div>
-									<div class="col-12">
-										<label for="inputAddress2" class="form-label">E-mail</label>
-										<input type="email" class="form-control" name="email" placeholder="Email">
-									</div>
-									<div class="col-md-6">
-										<label for="inputCity" class="form-label">Datum</label>
-										<input type="date" class="form-control" name="date" placeholder="Datum">
-									</div>
-									<div class="col-12">
-										<button class="btn btn-employee btn-outline-secondary">Opslaan</button>
-									</div>	
-								</form>
-							</div>
-						</div>
-						</div>
-					</div>
-				</div> -->
-
-				<!-- 
-
+			<div class="col-md-4">
+			<button class="simac-button"><i class="bi-file-fill"></i> Leidinggevende 1 </button> 
+			</div>
+		</div>
+	  	<div class="row">
+			<div class="col-md-4">
+				<a href="nieuwewerknemer.html" ><button class="btn-block simac-button" ><i class="bi-plus"></i> Werknemer toevoegen </button></a> 
+			</div>
+			<div class="col-md-2">
+			</div>
+			<div class="col-md-6">	
+				<input class="btn-block simac-button form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+			</div>
+		</div>
 				
 					  
 				<!-- MAIN -->
-				<div
-					class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-					<div class="col-12 col-md-12 col-lg-12">
-						<div class="row clearfix">
-							<div class="container">
+				
 
-
-							</div>
-						</div>
+		<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+			<div class="row clearfix">
+				<div class="col-12 col-md-12 col-lg-10">
+					<header><h4>Openstaande taken per werknemer</h4></header>
+					<div class="table-wrapper">
+						<table class="table-users table-taken">
+							<tr>
+								<th>Voornaam</th>
+								<th>Achternaam</th>
+								<th>Telefoonnummer</th>
+								<th>Email</th>
+								<th>Datum</th>
+								<th>Bewerken/verwijderen</th>
+							</tr>
+						</table>
 					</div>
-				</div>
-
-				<div class="col-12 col-md-8">
-					<div class="card radius-10">
-						<div class="card-body">
-							<header>
-								<h4>Openstaande taken per werknemer</h4>
-							</header>
-							<div class="table-wrapper">
-								<table class="table-users table-taken">
-									<tr>
-										<th>Voornaam</th>
-										<th>Achternaam</th>
-										<th>Telefoonnummer</th>
-										<th>Email</th>
-										<th>Datum</th>
-										<th>Bewerken/verwijderen</th>
-									</tr>
-
-
-								</table>
-							</div>
-
-
-							<!-- Edit Modal -->
-							<div class="container">
-								<!-- Edit Modal -->
-								<div class="edit-employee modal-wrapper3">
-									<div class="employee">
-										<div class="modal-header3">
-											<h3>Bewerk Werknemer</h3>
-										</div>
-										<div class="modal-body3">
-											<form class="form" autocomplete="off">
-												<input type="text" name="firstName" placeholder="Voornaam">
-												<input type="text" name="lastName" placeholder="Achternaam">
-												<input type="number" name="phone" placeholder="Telefoonnummer">
-												<input type="email" name="email" placeholder="Email">
-												<input type="date" name="date" placeholder="Datum">
-												<!-- Deze moet hier blijven staan anders gaat het kapot -->
-												<button class="btn btn-add btn-outline-secondary px-5">Bewerken</button>
-
-											</form>
-										</div>
-									</div>
+					<button type="button" class="btn btn-add btn-outline-secondary px-5">Voeg werknemer toe</button>
+						<!-- Add Modal -->
+						<div class="container">
+							<div class="col-12 col-md-12 col-lg-12 add-employee modal-wrapper3">
+							<div class="employee">
+								<div class="modal-header3"><h3>Voeg nieuwe werknemer toe</h3></div>
+								<div class="modal-body3">
+								<form class="form" autocomplete="off">
+									<input type="text" name="firstName" placeholder="Voornaam">
+									<input type="text" name="lastName" placeholder="Achternaam">
+									<input type="number" name="phone" placeholder="Telefoonnummer">
+									<input type="email" name="email" placeholder="Email">
+									<input type="date" name="date" placeholder="Datum">
+									<button class="btn btn-employee btn-outline-secondary">Opslaan</button>
+								</form>
 								</div>
 							</div>
+							</div>
+						
+						
+							<!-- Edit Modal -->
+							<div class="edit-employee modal-wrapper3">
+							<div class="employee">
+								<div class="modal-header3"><h3>Bewerk Werknemer</h3></div>
+								<div class="modal-body3">
+								<form class="form" autocomplete="off">
+									<input type="text" name="firstName" placeholder="Voornaam">
+									<input type="text" name="lastName" placeholder="Achternaam">
+									<input type="number" name="phone" placeholder="Telefoonnummer">
+									<input type="email" name="email" placeholder="Email">
+									<input type="date" name="date" placeholder="Datum">
+									<button class="btn btn-employee btn-outline-secondary">Opslaan</button>
+								</form>
+								</div>
+							</div>
+							</div>
+								
 						</div>
-					</div>
-
 				</div>
-				<!-- rechts -->
-				<div class="col-6 col-md-4">
-					<div class="card radius-10">
-						<div class="card-body">
-
-						</div>
-					</div>
-				</div>
-
-
-			</main>
+			</div>
 		</div>
-	</div>
-	<footer class="footer mt-auto py-3 bg-light">
-		<div class="container">
-			<span class="text-muted">Simac Assistant Onboarding</span>
-		</div>
-	</footer>
+	</main>
+
+
 
 
 
@@ -249,7 +180,7 @@
 	<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
 
 	<script>
-		// Your web app's Firebase configuration
+		// Firebase connectie
 		const firebaseConfig = {
 			apiKey: "AIzaSyDGlesNckUR_ME2jd0EKSP3BieJVxpRldw",
 			authDomain: "pwa-simac.firebaseapp.com",
@@ -259,27 +190,17 @@
 			appId: "1:1032055915418:web:b551853ddee057f6a3b023",
 			measurementId: "G-V30NRLBKSB"
 		};
-		// Initialize Firebase
+		// Firebase in gebruik nemen
 		firebase.initializeApp(firebaseConfig);
 		const db = firebase.firestore();
 	</script>
 
-	<script src="https://unpkg.com/feather-icons"></script>
-
 	<script src="src/index.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
-		integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
-		crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
-		integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha"
-		crossorigin="anonymous"></script>
-
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-		crossorigin="anonymous"></script>
 	<script src="./script.js"></script>
-	<script src="./banner.js"></script>
-	<script src="./notification.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

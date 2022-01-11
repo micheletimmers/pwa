@@ -8,10 +8,8 @@ const editModal = document.querySelector('.edit-employee');
 const editModalForm = document.querySelector('.edit-employee .form');
 
 const btnAdd = document.querySelector('.btn-add');
-const btnEdit = document.querySelector('.btn-edit');
 
 const tableUsers = document.querySelector('.table-users');
-const tableTaken = document.querySelector('.table-taken');
 
 let id;
 
@@ -19,10 +17,7 @@ let id;
 
 // Element creeeren en users renderen 
 const renderUser = (doc, takenlijst) => {         // item.data 
-  console.log(doc.data().firstName);              ///werknemer wordt opgeroepen
-
   const tr = `
-  
     <tr data-id='${doc.id}'>
       <td>${doc.data().firstName}</td>
       <td>${doc.data().lastName}</td>
@@ -30,13 +25,11 @@ const renderUser = (doc, takenlijst) => {         // item.data
       <td>${doc.data().email}</td>
       <td>${doc.data().date}</td>
       <td>
-      <i class="bi-pencil-square"><button class="btn btn-edit">Bekijk/Bewerk</button>
+        <i class="bi-pencil-square"><button class="btn btn-edit">Bekijk/Bewerk</button>
       </td>
       <td>
-        <button class="btn btn-delete">Verwijder</button>
+          <button class="btn btn-delete">Verwijder</button>
       </td>
-
-
   </tr>
  <tr>
     <th id="th-style">Taak</th>										
@@ -46,38 +39,28 @@ const renderUser = (doc, takenlijst) => {         // item.data
   tableUsers.insertAdjacentHTML('beforeend', tr);
  
   takenlijst.forEach((taak) => {
-  
-    
-
 
   const p = `
-  
-    
+
   <tr data-id='${taak.id}'>
-  
     <td>${taak.data().taakNaam}</td>
     <td>${taak.data().taakOmschrijving}</td>
-    
     <td>
-    <i class="bi-pencil-square"><button class="btn btn-edit2">Bewerk</button>
+    <i class="bi-pencil-square"><button class="btn btn-edit">Bewerk</button>
     </td>
     <td>
       <button class="btn btn-delete2">Verwijder</button>
     </td>
-
-
   </tr>
 `;
-tableTaken.insertAdjacentHTML('beforeend', p);
+tableUsers.insertAdjacentHTML('beforeend', p);
 
-    
-    console.log(taak.data());                     //taak wordt opgeroepen 
   })
 
   
 
 
-  // Button Click edit user
+  // Button gebruiker bewerken
   const btnEdit = document.querySelector(`[data-id='${doc.id}'] .btn-edit`);
   btnEdit.addEventListener('click', () => {
     editModal.classList.add('modal-show3');
@@ -92,7 +75,7 @@ tableTaken.insertAdjacentHTML('beforeend', p);
   });
 
 
-  // Click delete user
+  // Button verwijderen
   
   const btnDelete = document.querySelector(`[data-id='${doc.id}'] .btn-delete`);
   btnDelete.addEventListener('click', () => {

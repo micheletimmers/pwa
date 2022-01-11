@@ -1,3 +1,28 @@
+#simac-documenten-card{
+  position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 2px solid #24050d22;
+    border-radius: 0.25rem;
+    border-bottom-left-radius: 15px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: 0 2px 6px 0 rgb(218 218 253 / 65%),
+    0 0px 6px 0 rgb(206 206 238 / 54%);
+  font-weight: 500;
+  font-family: "Open Sans", sans-serif;
+}
+
+
+.doc-image {
+  width: 80%; !important
+}
+
 #th-style {
   display: table-cell;
   vertical-align: inherit;
