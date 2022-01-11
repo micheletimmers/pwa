@@ -1,6 +1,6 @@
 # Progressive Web App for Simac Onboarding afstudeeronderzoek by Michèle Timmers
 
-A brief description of what this project does and who it's for
+Progressive Web App deels werkende prototype.
 
 # Build with
 HTML, CSS, Javascript & Firebase 
