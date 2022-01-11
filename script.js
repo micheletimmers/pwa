@@ -18,14 +18,14 @@ let id;
 // Element creeeren en users renderen 
 const renderUser = (doc, takenlijst) => {         // item.data 
   const tr = `
+
     <tr data-id='${doc.id}'>
       <td>${doc.data().firstName}</td>
       <td>${doc.data().lastName}</td>
-      <td>${doc.data().phone}</td>
       <td>${doc.data().email}</td>
       <td>${doc.data().date}</td>
       <td>
-        <i class="bi-pencil-square"><button class="btn btn-edit">Bekijk/Bewerk</button>
+      <i class="bi-pencil-square"><button class="btn btn-edit">Bekijk</button>
       </td>
       <td>
           <button class="btn btn-delete">Verwijder</button>
@@ -35,6 +35,7 @@ const renderUser = (doc, takenlijst) => {         // item.data
     <th id="th-style">Taak</th>										
     <th id="th-style">Omschrijving</th>
     <th id="th-style">Datum</th>		
+    <th id="th-style">Actie</th>	
   </tr>
   `;
   tableUsers.insertAdjacentHTML('beforeend', tr);
@@ -48,12 +49,14 @@ const renderUser = (doc, takenlijst) => {         // item.data
     <td>${taak.data().taakOmschrijving}</td>
     <td>${taak.data().datumTaak}</td>
     <td>
-    <i class="bi-pencil-square"><button class="btn btn-edit">Bewerk</button>
+    
+    <button class="btn btn-edit">Bewerk</button>
     </td>
     <td>
       <button class="btn btn-delete2">Verwijder</button>
     </td>
   </tr>
+  
 `;
 tableUsers.insertAdjacentHTML('beforeend', p);
 

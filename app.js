@@ -24,7 +24,7 @@ const renderTaken = doc => {
       <td>${doc.data().taakOmschrijving}</td>
       <td>${doc.data().datumTaak}</td>
       <td>
-        <button class="btn btn-edit2">Edit</button>
+      <button class="btn btn-edit2">Edit</button>
         <button class="btn btn-delete2">Delete</button>
       </td>
       <td>
