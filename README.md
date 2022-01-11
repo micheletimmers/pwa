@@ -1,5 +1,6 @@
-Progressive Web App by Michèle Timmers
+Progressive Web App for Simac Onboarding afstudeeronderzoek by Michèle Timmers
 
-HTML, CSS, Javascript
+Build with
+HTML, CSS, Javascript & Firebase 
 
-Firebase
+Working high-fidelity prototype: Figma link
