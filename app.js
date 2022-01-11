@@ -21,11 +21,15 @@ const renderTaken = doc => {
   const tr = `
     <tr data-id='${doc.id}'>
       <td>${doc.data().taakNaam}</td>
-      <td>${doc.data().omschrijvingTaak}</td>
+      <td>${doc.data().taakOmschrijving}</td>
       <td>${doc.data().datumTaak}</td>
       <td>
         <button class="btn btn-edit2">Edit</button>
         <button class="btn btn-delete2">Delete</button>
+      </td>
+      <td>
+      
+      <button class="btn"><a target="_blank" href='https://outlook.live.com/calendar/0/deeplink/compose?body=${doc.data().taakOmschrijving}&enddt=${doc.data().datumTaak}T12%3A45%3A00%2B00%3A00&path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&startdt=${doc.data().datumTaak}T12%3A15%3A00%2B00%3A00&subject=${doc.data().taakNaam}'><i class="fa fa-bell"></i> Reminder</a></button>
       </td>
     </tr>
   `;
@@ -38,7 +42,7 @@ const renderTaken = doc => {
 
     id = doc.id;
     editModalForm2.taakNaam.value = doc.data().taakNaam;
-    editModalForm2.omschrijvingTaak.value = doc.data().omschrijvingTaak;
+    editModalForm2.taakOmschrijving.value = doc.data().taakOmschrijving;
     editModalForm2.datumTaak.value = doc.data().datumTaak;
   });
 
@@ -59,7 +63,7 @@ btnAdd2.addEventListener('click', () => {
   addModal2.classList.add('modal-show2');
 
   addModalForm2.taakNaam.value = '';
-  addModalForm2.omschrijvingTaak.value = '';
+  addModalForm2.taakOmschrijving.value = '';
   addModalForm2.datumTaak.value = '';
 });
 
@@ -107,7 +111,7 @@ addModalForm2.addEventListener('submit', e => {
   e.preventDefault();
   db.collectionGroup('taken').add({
     taakNaam: addModalForm2.taakNaam.value,
-    omschrijvingTaak: addModalForm2.omschrijvingTaak.value,
+    taakOmschrijving: addModalForm2.taakOmschrijving.value,
     datumTaak: addModalForm2.datumTaak.value,
   });
   modalWrapper2.classList.remove('modal-show2');
@@ -118,7 +122,7 @@ editModalForm2.addEventListener('submit', e => {        //DIT IS ORIGINEEL
   e.preventDefault();
   db.collectionGroup('taken').update({
     taakNaam: editModalForm2.taakNaam.value,
-    omschrijvingTaak: editModalForm2.omschrijvingTaak.value,
+    taakOmschrijving: editModalForm2.taakOmschrijving.value,
     datumTaak: editModalForm2.datumTaak.value,
   });
   editModal2.classList.remove('modal-show2');

@@ -33,7 +33,8 @@ const renderUser = (doc, takenlijst) => {         // item.data
   </tr>
  <tr>
     <th id="th-style">Taak</th>										
-    <th id="th-style">Omschrijving</th>	
+    <th id="th-style">Omschrijving</th>
+    <th id="th-style">Datum</th>		
   </tr>
   `;
   tableUsers.insertAdjacentHTML('beforeend', tr);
@@ -45,6 +46,7 @@ const renderUser = (doc, takenlijst) => {         // item.data
   <tr data-id='${taak.id}'>
     <td>${taak.data().taakNaam}</td>
     <td>${taak.data().taakOmschrijving}</td>
+    <td>${taak.data().datumTaak}</td>
     <td>
     <i class="bi-pencil-square"><button class="btn btn-edit">Bewerk</button>
     </td>
