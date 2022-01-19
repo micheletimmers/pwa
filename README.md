@@ -1,6 +1,13 @@
-Progressive Web App for Simac Onboarding afstudeeronderzoek by Michèle Timmers
+# Progressive Web App for Simac Onboarding afstudeeronderzoek by Michèle Timmers
 
-Build with
+Progressive Web App deels werkende prototype.
+
+# Build with
 HTML, CSS, Javascript & Firebase 
 
-Working high-fidelity prototype: Figma link
+
+## Demo
+
+Figma High-Fidelity prototype desktop: zie afstudeeronderzoek
+
+Figma High-Fidelity prototype mobiel: zie afstudeeronderzoek
