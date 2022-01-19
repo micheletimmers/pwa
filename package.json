@@ -1,7 +1,7 @@
 {
   "name": "pwa",
   "version": "1.0.0",
-  "description": "Contains starting code for my tutorial on creating PWAs, check it out here:\\ https://www.youtube.com/watch?v=WbbAPfDVqfY",
+  "description": "pwa onboarding",
   "main": "sw.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

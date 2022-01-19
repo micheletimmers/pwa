@@ -28,8 +28,9 @@ const renderTaken = doc => {
         <button class="btn btn-delete2">Delete</button>
       </td>
       <td>
-      
-      <button class="btn"><a target="_blank" href='https://outlook.live.com/calendar/0/deeplink/compose?body=${doc.data().taakOmschrijving}&enddt=${doc.data().datumTaak}T12%3A45%3A00%2B00%3A00&path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&startdt=${doc.data().datumTaak}T12%3A15%3A00%2B00%3A00&subject=${doc.data().taakNaam}'><i class="fa fa-bell"></i> Reminder</a></button>
+      <button class="btn"><a target="_blank" href='https://outlook.live.com/calendar/0/deeplink/compose?body=${doc.data().taakOmschrijving}&enddt
+      =${doc.data().datumTaak}T12%3A45%3A00%2B00%3A00&path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&startdt=${doc.data().datumTaak}T12%3A15%3A00%2B00%3A00&subject
+      =${doc.data().taakNaam}'><i class="fa fa-bell"></i> Reminder</a></button>
       </td>
     </tr>
   `;

@@ -1,28 +1,42 @@
 User-Agent: Microsoft-MacOutlook/16.56.21121100
-Date: Tue, 28 Dec 2021 17:17:55 +0100
-Subject: <geen onderwerp>
-From: Michele Timmers <micheletimmers94@gmail.com>
-Message-ID: <A32BAF87-B2F0-4B94-A2AF-AC747CAF9D3E@gmail.com>
+Date: Tue, 11 Jan 2022 18:37:26 +0100
+Subject: Boeket nieuwe werknemer bestellen
+From: =?UTF-8?B?TWljaMOobGU=?= Timmers <michele.timmers@simac.com>
+To: "nieuwe@werknemer.test" <nieuwe@werknemer.test>
+Message-ID: <485804F9-F856-45D0-ACC9-36E2867AF9CE@simac.com>
+Thread-Topic: Boeket nieuwe werknemer bestellen
 Mime-version: 1.0
 Content-type: multipart/alternative;
-	boundary="B_3723556678_1734488807"
+	boundary="B_3724771056_1551016619"
 
 > This message is in MIME format. Since your mail reader does not understand
 this format, some or all of this message may not be legible.
 
---B_3723556678_1734488807
+--B_3724771056_1551016619
 Content-type: text/plain;
 	charset="UTF-8"
 Content-transfer-encoding: 7bit
 
-Template testebn
+Dit is een automatisch bericht
 
  
 
+Beste Fleurop,
+
  
 
+Komende [datum] heeft Simac Veldhoven een [soort boeket] nodig.
 
---B_3723556678_1734488807
+Deze mag worden geleverd bij de receptie in Veldhoven.
+
+ 
+
+Met vriendelijke groet,
+
+[Leidinggevende]
+
+
+--B_3724771056_1551016619
 Content-type: text/html;
 	charset="UTF-8"
 Content-transfer-encoding: quoted-printable
@@ -33,12 +47,13 @@ s-microsoft-com:office:word" xmlns:m=3D"http://schemas.microsoft.com/office/20=
 ontent-Type content=3D"text/html; charset=3Dutf-8"><meta name=3DProgId content=3DWor=
 d.Document><meta name=3DGenerator content=3D"Microsoft Word 15"><meta name=3DOrigi=
 nator content=3D"Microsoft Word 15"><link rel=3DFile-List href=3D"cid:filelist.xml=
-@01D7FC0E.D1380490"><!--[if gte mso 9]><xml>
+@01D8071A.47C55B10"><!--[if gte mso 9]><xml>
 <o:OfficeDocumentSettings>
 <o:AllowPNG/>
 </o:OfficeDocumentSettings>
 </xml><![endif]--><!--[if gte mso 9]><xml>
 <w:WordDocument>
+<w:SpellingState>Clean</w:SpellingState>
 <w:GrammarState>Clean</w:GrammarState>
 <w:DocumentKind>DocumentEmail</w:DocumentKind>
 <w:TrackMoves/>
@@ -59,6 +74,7 @@ nator content=3D"Microsoft Word 15"><link rel=3DFile-List href=3D"cid:filelist.x
 <w:SplitPgBreakAndParaMark/>
 <w:EnableOpenTypeKerning/>
 </w:Compatibility>
+<w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
 <m:mathPr>
 <m:mathFont m:val=3D"Cambria Math"/>
 <m:brkBin m:val=3D"before"/>
@@ -758,11 +774,7 @@ p.MsoNormal, li.MsoNormal, div.MsoNormal
 	mso-pagination:widow-orphan;
 	font-size:11.0pt;
 	font-family:"Calibri",sans-serif;
-	mso-ascii-font-family:Calibri;
-	mso-fareast-font-family:Calibri;
-	mso-hansi-font-family:Calibri;
-	mso-bidi-font-family:"Times New Roman";
-	mso-fareast-language:EN-US;}
+	mso-fareast-font-family:Calibri;}
 a:link, span.MsoHyperlink
 	{mso-style-noshow:yes;
 	mso-style-priority:99;
@@ -775,27 +787,57 @@ a:visited, span.MsoHyperlinkFollowed
 	color:#954F72;
 	text-decoration:underline;
 	text-underline:single;}
-span.E-mailStijl17
-	{mso-style-type:personal-compose;
-	mso-style-noshow:yes;
+p.msonormal0, li.msonormal0, div.msonormal0
+	{mso-style-name:msonormal;
 	mso-style-unhide:no;
-	mso-ansi-font-size:11.0pt;
-	mso-bidi-font-size:11.0pt;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-font-family:Calibri;}
+p.msonormal00, li.msonormal00, div.msonormal00
+	{mso-style-name:msonormal0;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-font-family:Calibri;}
+p.msochpdefault, li.msochpdefault, div.msochpdefault
+	{mso-style-name:msochpdefault;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-font-family:Calibri;}
+span.e-mailstijl18
+	{mso-style-name:e-mailstijl18;
+	mso-style-unhide:no;
 	font-family:"Calibri",sans-serif;
 	mso-ascii-font-family:Calibri;
-	mso-fareast-font-family:Calibri;
 	mso-hansi-font-family:Calibri;
-	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-family:Calibri;
 	color:windowtext;}
 .MsoChpDefault
 	{mso-style-type:export-only;
 	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
 	font-family:"Calibri",sans-serif;
 	mso-ascii-font-family:Calibri;
-	mso-fareast-font-family:Calibri;
 	mso-hansi-font-family:Calibri;
-	mso-bidi-font-family:"Times New Roman";
-	mso-fareast-language:EN-US;}
+	mso-bidi-font-family:Calibri;}
 @page WordSection1
 	{size:612.0pt 792.0pt;
 	margin:70.85pt 70.85pt 70.85pt 70.85pt;
@@ -815,18 +857,17 @@ table.MsoNormalTable
 	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
 	mso-para-margin:0cm;
 	mso-pagination:widow-orphan;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;
-	mso-ascii-font-family:Calibri;
-	mso-hansi-font-family:Calibri;
-	mso-bidi-font-family:"Times New Roman";
-	mso-fareast-language:EN-US;}
+	font-size:10.0pt;
+	font-family:"Calibri",sans-serif;}
 </style><![endif]--></head><body lang=3DNL link=3D"#0563C1" vlink=3D"#954F72" sty=
-le=3D'tab-interval:35.4pt;word-wrap:break-word'><div class=3DWordSection1><p cla=
-ss=3DMsoNormal><span lang=3DEN-US style=3D'mso-ansi-language:EN-US'>Template teste=
-bn</span><o:p></o:p></p><p class=3DMsoNormal><a name=3D"_MailAutoSig"></a><o:p>&=
-nbsp;</o:p></p><p class=3DMsoNormal><span lang=3DEN-US style=3D'mso-ansi-language:=
-EN-US'><o:p>&nbsp;</o:p></span></p></div></body></html>
+le=3D'tab-interval:35.4pt;word-wrap:break-word'><div class=3DWordSection1><div><=
+p class=3DMsoNormal><i>Dit is een automatisch bericht<o:p></o:p></i></p><p cla=
+ss=3DMsoNormal><o:p>&nbsp;</o:p></p><p class=3DMsoNormal>Beste Fleurop,</p><p cl=
+ass=3DMsoNormal><o:p>&nbsp;</o:p></p><p class=3DMsoNormal>Komende [datum] heeft =
+Simac Veldhoven een [soort boeket] nodig.</p><p class=3DMsoNormal>Deze mag wor=
+den geleverd bij de receptie in Veldhoven.</p><p class=3DMsoNormal><o:p>&nbsp;=
+</o:p></p><p class=3DMsoNormal>Met vriendelijke groet,</p><p class=3DMsoNormal>[=
+Leidinggevende]</p></div></div></body></html>
 
---B_3723556678_1734488807--
+--B_3724771056_1551016619--
 
