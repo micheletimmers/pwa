@@ -8,6 +8,6 @@ HTML, CSS, Javascript & Firebase
 
 ## Demo
 
-Figma High-Fidelity prototype desktop:
+Figma High-Fidelity prototype desktop: zie afstudeeronderzoek
 
-Figma High-Fidelity prototype mobiel:
+Figma High-Fidelity prototype mobiel: zie afstudeeronderzoek
